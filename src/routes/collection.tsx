@@ -14,7 +14,6 @@ export const Route = createFileRoute("/collection")({
       },
       { property: "og:title", content: "Collection — WAL & Co" },
       { property: "og:description", content: "Diamants taillés certifiés, sélection maison." },
-      { property: "og:image", content: "/og/collection.jpg" },
     ],
   }),
   component: CollectionPage,
