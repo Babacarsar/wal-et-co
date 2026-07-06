@@ -1,5 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Gem, Award, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Gem,
+  Award,
+  Sparkles,
+  Search,
+  Scissors,
+  FileCheck,
+  Package,
+  Quote,
+  Globe2,
+  Users,
+} from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import heroDiamond from "@/assets/hero-diamond.jpg";
 import collectionDiamonds from "@/assets/collection-diamonds.jpg";
