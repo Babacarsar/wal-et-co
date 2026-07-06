@@ -1,5 +1,18 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Gem, Award, Sparkles } from "lucide-react";
+import {
+  ArrowRight,
+  ShieldCheck,
+  Gem,
+  Award,
+  Sparkles,
+  Search,
+  Scissors,
+  FileCheck,
+  Package,
+  Quote,
+  Globe2,
+  Users,
+} from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import heroDiamond from "@/assets/hero-diamond.jpg";
 import collectionDiamonds from "@/assets/collection-diamonds.jpg";
@@ -160,6 +173,209 @@ function Index() {
           <Link to="/about" className="mt-8 inline-flex btn-outline-gold">
             Notre maison
           </Link>
+        </div>
+      </section>
+
+      {/* STATS */}
+      <section className="border-y border-border/60 bg-card/40">
+        <div className="container-lux py-16 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+          {[
+            { k: "20+", v: "années d'expertise" },
+            { k: "100%", v: "diamants certifiés" },
+            { k: "3", v: "continents desservis" },
+            { k: "24 h", v: "délai de réponse" },
+          ].map((s) => (
+            <div key={s.v}>
+              <div className="font-display text-4xl md:text-5xl text-gold-gradient">
+                {s.k}
+              </div>
+              <div className="mt-2 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
+                {s.v}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="container-lux py-24 lg:py-32">
+        <div className="max-w-2xl">
+          <span className="eyebrow">Notre processus</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            De la mine <span className="italic text-gold-gradient">à votre écrin</span>
+          </h2>
+          <p className="mt-6 text-muted-foreground leading-relaxed">
+            Un circuit court, maîtrisé à chaque étape, qui garantit la
+            traçabilité, l'éthique et la qualité de la pierre que vous recevez.
+          </p>
+        </div>
+
+        <ol className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            {
+              icon: Search,
+              step: "01",
+              title: "Approvisionnement",
+              text: "Sélection du brut à la source, en République démocratique du Congo et auprès de partenaires vérifiés.",
+            },
+            {
+              icon: Scissors,
+              step: "02",
+              title: "Taille & polissage",
+              text: "Optimisation par des maîtres-tailleurs pour révéler l'éclat, la symétrie et la brillance maximale.",
+            },
+            {
+              icon: FileCheck,
+              step: "03",
+              title: "Certification",
+              text: "Analyse indépendante par laboratoire reconnu — GIA, IGI, HRD — pour un rapport objectif.",
+            },
+            {
+              icon: Package,
+              step: "04",
+              title: "Livraison sécurisée",
+              text: "Expédition assurée porte-à-porte par transporteur spécialisé, ou remise en main propre.",
+            },
+          ].map(({ icon: Icon, step, title, text }) => (
+            <li key={step} className="card-lux p-8 relative">
+              <div className="absolute top-6 right-6 text-[10px] tracking-[0.28em] text-gold/70">
+                {step}
+              </div>
+              <Icon size={22} className="text-gold" />
+              <h3 className="mt-6 font-display text-2xl">{title}</h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                {text}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* 4C GUIDE */}
+      <section className="border-y border-border/60 bg-card/30">
+        <div className="container-lux py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-start">
+          <div>
+            <span className="eyebrow">Guide d'achat</span>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+              Comprendre les <span className="italic text-gold-gradient">4C</span>
+            </h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed">
+              Carat, Couleur, Clarté, Taille : les quatre critères universels
+              qui définissent la qualité d'un diamant. Chez WAL &amp; Co, nous
+              privilégions les gammes hautes de chaque axe.
+            </p>
+            <Link to="/collection" className="mt-8 inline-flex btn-outline-gold">
+              Voir la collection
+            </Link>
+          </div>
+
+          <dl className="space-y-4">
+            {[
+              {
+                t: "Carat",
+                d: "Le poids de la pierre. 1 carat = 0,2 gramme. La rareté croît de façon exponentielle avec le poids.",
+              },
+              {
+                t: "Couleur",
+                d: "De D (incolore, le plus rare) à Z (jaunâtre). Nous sélectionnons principalement D à H.",
+              },
+              {
+                t: "Clarté",
+                d: "De FL (sans inclusion) à I3. Nous privilégions FL à VS2 — pureté invisible à l'œil nu.",
+              },
+              {
+                t: "Taille",
+                d: "La qualité de la taille détermine l'éclat. Nous ne retenons que les grades Excellent et Very Good.",
+              },
+            ].map((c) => (
+              <div key={c.t} className="card-lux p-6">
+                <dt className="font-display text-2xl">{c.t}</dt>
+                <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {c.d}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* AUDIENCES */}
+      <section className="container-lux py-24 lg:py-32">
+        <div className="max-w-2xl">
+          <span className="eyebrow">Nous servons</span>
+          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            Particuliers &amp; <span className="italic text-gold-gradient">professionnels</span>
+          </h2>
+        </div>
+        <div className="mt-14 grid md:grid-cols-2 gap-6">
+          <div className="card-lux p-10">
+            <Users size={22} className="text-gold" />
+            <h3 className="mt-6 font-display text-3xl">B2C — Particuliers</h3>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Pour une bague de fiançailles, une pièce d'exception ou un
+              investissement patrimonial, nous vous accompagnons de la
+              sélection à la livraison, avec discrétion et pédagogie.
+            </p>
+            <Link to="/contact" className="mt-8 inline-flex btn-outline-gold">
+              Nous contacter
+            </Link>
+          </div>
+          <div className="card-lux p-10">
+            <Globe2 size={22} className="text-gold" />
+            <h3 className="mt-6 font-display text-3xl">B2B — Professionnels</h3>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Joailliers, grossistes, bureaux d'achat : accédez à notre stock
+              élargi, à nos conditions dédiées et à un service de recherche
+              sur mesure, calibré pour vos volumes.
+            </p>
+            <Link to="/contact" className="mt-8 inline-flex btn-outline-gold">
+              Ouvrir un compte pro
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="border-y border-border/60 bg-card/30">
+        <div className="container-lux py-24 lg:py-32">
+          <div className="max-w-2xl">
+            <span className="eyebrow">Ils nous font confiance</span>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+              La parole <span className="italic text-gold-gradient">à nos clients</span>
+            </h2>
+          </div>
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+            {[
+              {
+                q: "Une écoute rare et une pierre parfaite pour la bague de fiançailles. Le rapport GIA était joint, tout était limpide.",
+                n: "Élise M.",
+                r: "Cliente particulière · Montréal",
+              },
+              {
+                q: "Nous travaillons avec WAL & Co pour nos pièces de haute joaillerie. Régularité, transparence, qualité : trois piliers.",
+                n: "Maison Vasseur",
+                r: "Joaillier · Paris",
+              },
+              {
+                q: "Un partenaire fiable pour nos achats en gros. Le sourcing en RDC leur donne un vrai avantage sur la traçabilité.",
+                n: "D. Cohen",
+                r: "Grossiste · Anvers",
+              },
+            ].map((t) => (
+              <figure key={t.n} className="card-lux p-8">
+                <Quote size={20} className="text-gold" />
+                <blockquote className="mt-6 text-muted-foreground leading-relaxed">
+                  « {t.q} »
+                </blockquote>
+                <figcaption className="mt-8 border-t border-border/60 pt-5">
+                  <div className="font-display text-lg">{t.n}</div>
+                  <div className="mt-1 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
+                    {t.r}
+                  </div>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
