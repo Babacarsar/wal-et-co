@@ -130,7 +130,7 @@ function AboutPage() {
           <h2 className="mt-4 font-display text-4xl">
             Un projet, une pierre en tête ?
           </h2>
-          <div classNameError="mt-8 flex flex-wrap gap-4 justify-center">
+          <div className="mt-8 flex flex-wrap gap-4 justify-center">
             <Link to="/contact" className="btn-gold btn-gold-hover">Nous contacter</Link>
             <Link to="/collection" className="btn-outline-gold">Voir la collection</Link>
           </div>
