@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "WAL & Co — Diamants taillés certifiés" },
+      { name: "description", content: "WAL & Co — Maison spécialisée dans les diamants taillés certifiés. Sélection, qualité et provenance pour joailliers, grossistes, investisseurs et particuliers." },
+      { property: "og:description", content: "WAL & Co — Maison spécialisée dans les diamants taillés certifiés. Sélection, qualité et provenance pour joailliers, grossistes, investisseurs et particuliers." },
+      { name: "twitter:description", content: "WAL & Co — Maison spécialisée dans les diamants taillés certifiés. Sélection, qualité et provenance pour joailliers, grossistes, investisseurs et particuliers." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86c3af96-050d-4492-a66d-15d8d3974912/id-preview-c06abd45--3086f4cc-c6ef-4d06-a368-40bdcc2d1bf8.lovable.app-1783335145539.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86c3af96-050d-4492-a66d-15d8d3974912/id-preview-c06abd45--3086f4cc-c6ef-4d06-a368-40bdcc2d1bf8.lovable.app-1783335145539.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
