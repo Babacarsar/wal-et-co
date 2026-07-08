@@ -33,49 +33,73 @@
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-deep-blue: var(--deep-blue);
+  --color-diamond: var(--diamond);
 
   --font-serif: "Cormorant Garamond", "Playfair Display", ui-serif, Georgia, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Cormorant Garamond", "Playfair Display", ui-serif, Georgia, serif;
 
-  --shadow-luxe: 0 30px 80px -20px rgb(0 0 0 / 0.6);
+  --shadow-luxe: 0 30px 80px -20px oklch(0.5 0.05 250 / 0.25);
+
+  --animate-ken-burns: ken-burns 18s ease-in-out infinite alternate;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-shimmer: shimmer 6s linear infinite;
+  --animate-fade-up: fade-up 900ms ease-out both;
+}
+
+@keyframes ken-burns {
+  0%   { transform: scale(1.05) translate3d(0, 0, 0); }
+  100% { transform: scale(1.18) translate3d(-1.5%, -1.5%, 0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 :root {
   --radius: 0.25rem;
 
-  /* Luxury dark palette: obsidian black, deep sapphire, warm gold, ivory */
-  --background: oklch(0.13 0.01 260);
-  --foreground: oklch(0.96 0.005 90);
+  /* Palette diamant : blanc pur, texte gris diamant, accents saphir & or */
+  --background: oklch(0.995 0.002 250);
+  --foreground: oklch(0.28 0.03 250);       /* gris diamant profond */
 
-  --card: oklch(0.17 0.015 260);
-  --card-foreground: oklch(0.96 0.005 90);
+  --card: oklch(0.99 0.004 250);
+  --card-foreground: oklch(0.28 0.03 250);
 
-  --popover: oklch(0.17 0.015 260);
-  --popover-foreground: oklch(0.96 0.005 90);
+  --popover: oklch(0.99 0.004 250);
+  --popover-foreground: oklch(0.28 0.03 250);
 
-  --primary: oklch(0.78 0.13 82);         /* champagne gold */
-  --primary-foreground: oklch(0.13 0.01 260);
+  --primary: oklch(0.62 0.14 78);            /* or */
+  --primary-foreground: oklch(0.99 0.002 250);
 
-  --secondary: oklch(0.22 0.03 260);
-  --secondary-foreground: oklch(0.96 0.005 90);
+  --secondary: oklch(0.96 0.008 250);
+  --secondary-foreground: oklch(0.28 0.03 250);
 
-  --muted: oklch(0.2 0.02 260);
-  --muted-foreground: oklch(0.72 0.02 90);
+  --muted: oklch(0.96 0.006 250);
+  --muted-foreground: oklch(0.5 0.03 250);
 
-  --accent: oklch(0.35 0.09 260);          /* deep sapphire */
-  --accent-foreground: oklch(0.96 0.005 90);
+  --accent: oklch(0.55 0.12 258);            /* saphir */
+  --accent-foreground: oklch(0.99 0.002 250);
 
   --destructive: oklch(0.6 0.22 25);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.28 0.02 260 / 60%);
-  --input: oklch(0.28 0.02 260);
-  --ring: oklch(0.78 0.13 82);
+  --border: oklch(0.88 0.01 250);
+  --input: oklch(0.9 0.01 250);
+  --ring: oklch(0.62 0.14 78);
 
-  --gold: oklch(0.82 0.14 82);
-  --gold-soft: oklch(0.68 0.09 82);
-  --deep-blue: oklch(0.28 0.09 258);
+  --gold: oklch(0.68 0.14 82);
+  --gold-soft: oklch(0.78 0.09 82);
+  --deep-blue: oklch(0.4 0.11 258);
+  --diamond: oklch(0.55 0.05 250);
 }
 
 @layer base {
@@ -93,8 +117,8 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     background-image:
-      radial-gradient(ellipse at top, oklch(0.2 0.05 258 / 40%), transparent 60%),
-      radial-gradient(ellipse at bottom right, oklch(0.25 0.08 258 / 25%), transparent 55%);
+      radial-gradient(ellipse at top, oklch(0.9 0.03 250 / 60%), transparent 60%),
+      radial-gradient(ellipse at bottom right, oklch(0.92 0.04 260 / 50%), transparent 55%);
     background-attachment: fixed;
   }
 
@@ -102,7 +126,10 @@
     font-family: var(--font-display);
     font-weight: 500;
     letter-spacing: -0.01em;
+    color: var(--foreground);
   }
+
+  img { will-change: transform; }
 }
 
 @utility container-lux {
@@ -128,10 +155,24 @@
 }
 
 @utility text-gold-gradient {
-  background: linear-gradient(120deg, oklch(0.88 0.1 85), oklch(0.72 0.14 75), oklch(0.9 0.08 90));
+  background: linear-gradient(120deg, oklch(0.72 0.14 82), oklch(0.55 0.15 78), oklch(0.78 0.12 88));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+@utility text-diamond-gradient {
+  background: linear-gradient(120deg,
+    oklch(0.55 0.05 250) 0%,
+    oklch(0.7 0.08 240) 30%,
+    oklch(0.45 0.09 258) 55%,
+    oklch(0.72 0.06 220) 80%,
+    oklch(0.5 0.06 250) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 8s linear infinite;
 }
 
 @utility btn-gold {
@@ -144,15 +185,15 @@
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--primary-foreground);
-  background: linear-gradient(135deg, oklch(0.85 0.13 85), oklch(0.72 0.14 78));
-  border: 1px solid oklch(0.85 0.13 85);
+  color: oklch(0.99 0.002 250);
+  background: linear-gradient(135deg, oklch(0.75 0.13 85), oklch(0.6 0.15 78));
+  border: 1px solid oklch(0.7 0.14 82);
   transition: all 300ms ease;
   cursor: pointer;
 }
 @utility btn-gold-hover {
   &:hover {
-    box-shadow: 0 10px 30px -10px oklch(0.78 0.14 82 / 60%);
+    box-shadow: 0 12px 30px -10px oklch(0.68 0.14 82 / 55%);
     transform: translateY(-1px);
   }
 }
@@ -173,9 +214,45 @@
   transition: all 300ms ease;
   cursor: pointer;
 }
+@utility btn-outline-gold {
+  &:hover {
+    background: oklch(0.68 0.14 82 / 8%);
+  }
+}
 
 @utility card-lux {
-  background: linear-gradient(180deg, oklch(0.17 0.015 260 / 90%), oklch(0.15 0.02 260 / 90%));
+  background: linear-gradient(180deg, oklch(1 0 0 / 90%), oklch(0.98 0.005 250 / 90%));
   border: 1px solid var(--color-border);
   backdrop-filter: blur(6px);
+  box-shadow: 0 1px 0 oklch(1 0 0 / 60%) inset, 0 20px 40px -30px oklch(0.4 0.05 250 / 30%);
 }
+
+/* Photo dynamique : ken-burns + hover zoom + halo */
+@utility img-dynamic {
+  overflow: hidden;
+  position: relative;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: ken-burns 20s ease-in-out infinite alternate;
+    transition: transform 700ms ease, filter 700ms ease;
+  }
+  &:hover > img {
+    transform: scale(1.08);
+    filter: brightness(1.05) contrast(1.05);
+  }
+  &::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, transparent 30%, oklch(1 0 0 / 25%) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shimmer 7s linear infinite;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+}
+
+@utility float-slow { animation: float 8s ease-in-out infinite; }
+@utility fade-up { animation: fade-up 900ms ease-out both; }
+
