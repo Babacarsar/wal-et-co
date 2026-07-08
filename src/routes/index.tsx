@@ -32,7 +32,7 @@ function Index() {
             <span className="eyebrow">Maison de diamants — Depuis toujours</span>
             <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-foreground">
               L'éclat rare, <br />
-              <span className="text-gold-gradient italic">taillé pour l'éternité.</span>
+              <span className="text-diamond-gradient italic">taillé pour l'éternité.</span>
             </h1>
             <p className="mt-8 max-w-lg text-base leading-relaxed text-muted-foreground">
               WAL &amp; Co sélectionne, certifie et vous présente des diamants taillés
@@ -99,7 +99,7 @@ function Index() {
           <div>
             <span className="eyebrow">La Collection</span>
             <h2 className="mt-4 font-display text-4xl md:text-5xl">
-              Des pierres <span className="italic text-gold-gradient">d'exception</span>
+              Des pierres <span className="italic text-diamond-gradient">d'exception</span>
             </h2>
           </div>
           <Link to="/collection" className="text-[11px] tracking-[0.24em] uppercase text-gold hover:underline">
@@ -157,7 +157,7 @@ function Index() {
         <div className="order-1 lg:order-2">
           <span className="eyebrow">L'histoire WAL &amp; Co</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">
-            Un savoir-faire au service <span className="italic text-gold-gradient">de la rareté</span>
+            Un savoir-faire au service <span className="italic text-diamond-gradient">de la rareté</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
             Depuis nos origines, WAL &amp; Co œuvre à révéler l'âme des diamants.
@@ -185,7 +185,7 @@ function Index() {
             { k: "24 h", v: "délai de réponse" },
           ].map((s) => (
             <div key={s.v}>
-              <div className="font-display text-4xl md:text-5xl text-gold-gradient">
+              <div className="font-display text-4xl md:text-5xl text-diamond-gradient">
                 {s.k}
               </div>
               <div className="mt-2 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
@@ -201,7 +201,7 @@ function Index() {
         <div className="max-w-2xl">
           <span className="eyebrow">Notre processus</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">
-            De la mine <span className="italic text-gold-gradient">à votre écrin</span>
+            De la mine <span className="italic text-diamond-gradient">à votre écrin</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
             Un circuit court, maîtrisé à chaque étape, qui garantit la
@@ -256,7 +256,7 @@ function Index() {
           <div>
             <span className="eyebrow">Guide d'achat</span>
             <h2 className="mt-4 font-display text-4xl md:text-5xl">
-              Comprendre les <span className="italic text-gold-gradient">4C</span>
+              Comprendre les <span className="italic text-diamond-gradient">4C</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
               Carat, Couleur, Clarté, Taille : les quatre critères universels
@@ -303,7 +303,7 @@ function Index() {
         <div className="max-w-2xl">
           <span className="eyebrow">Nous servons</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">
-            Particuliers &amp; <span className="italic text-gold-gradient">professionnels</span>
+            Particuliers &amp; <span className="italic text-diamond-gradient">professionnels</span>
           </h2>
         </div>
         <div className="mt-14 grid md:grid-cols-2 gap-6">
@@ -340,7 +340,7 @@ function Index() {
           <div className="max-w-2xl">
             <span className="eyebrow">Ils nous font confiance</span>
             <h2 className="mt-4 font-display text-4xl md:text-5xl">
-              La parole <span className="italic text-gold-gradient">à nos clients</span>
+              La parole <span className="italic text-diamond-gradient">à nos clients</span>
             </h2>
           </div>
           <div className="mt-14 grid md:grid-cols-3 gap-6">
@@ -389,7 +389,7 @@ function Index() {
           <div className="relative">
             <span className="eyebrow">Sur mesure</span>
             <h2 className="mt-4 font-display text-4xl md:text-5xl">
-              Une pierre en tête ? <span className="italic text-gold-gradient">Nous la trouvons.</span>
+              Une pierre en tête ? <span className="italic text-diamond-gradient">Nous la trouvons.</span>
             </h2>
             <p className="mt-6 max-w-xl mx-auto text-muted-foreground">
               Décrivez-nous le diamant recherché — carat, couleur, clarté, taille,
