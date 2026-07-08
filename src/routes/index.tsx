@@ -54,15 +54,14 @@ function Index() {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-8 bg-gradient-to-br from-gold/10 via-transparent to-deep-blue/30 blur-3xl" />
-            <div className="relative overflow-hidden border border-border shadow-luxe">
+          <div className="relative fade-up">
+            <div className="absolute -inset-8 bg-gradient-to-br from-gold/20 via-transparent to-deep-blue/20 blur-3xl float-slow" />
+            <div className="img-dynamic relative aspect-[4/5] border border-border shadow-luxe">
               <img
                 src={heroDiamond}
                 alt="Diamant taillé brillant WAL & Co"
                 width={1600}
-                height={1200}
-                className="w-full h-auto object-cover"
+                height={2000}
               />
             </div>
             <div className="absolute -bottom-6 -left-6 card-lux p-5 hidden md:block">
