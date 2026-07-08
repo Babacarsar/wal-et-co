@@ -25,19 +25,46 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <SiteLayout>
-      {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="container-lux grid lg:grid-cols-2 gap-12 items-center py-20 lg:py-32">
-          <div>
-            <span className="eyebrow">Maison de diamants — Depuis toujours</span>
-            <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-foreground">
+      {/* HERO — full bleed cinématique */}
+      <section className="relative h-[92vh] min-h-[640px] w-full overflow-hidden">
+        {/* Image de fond animée (ken-burns) */}
+        <div className="absolute inset-0">
+          <img
+            src={heroDiamond}
+            alt="Diamant taillé brillant WAL & Co"
+            className="w-full h-full object-cover"
+            style={{ animation: "ken-burns 22s ease-in-out infinite alternate" }}
+          />
+        </div>
+
+        {/* Voile lumineux pour lisibilité + halo doré */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/55 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+        <div className="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-gold/20 blur-[120px] float-slow pointer-events-none" />
+        <div className="absolute -bottom-40 -left-40 w-[520px] h-[520px] rounded-full bg-accent/20 blur-[120px] float-slow pointer-events-none" />
+
+        {/* Effet shimmer sur toute la scène */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40 mix-blend-overlay"
+          style={{
+            backgroundImage:
+              "linear-gradient(120deg, transparent 30%, oklch(1 0 0 / 40%) 50%, transparent 70%)",
+            backgroundSize: "200% 100%",
+            animation: "shimmer 9s linear infinite",
+          }}
+        />
+
+        {/* Contenu */}
+        <div className="relative container-lux h-full flex flex-col justify-center">
+          <div className="max-w-2xl fade-up">
+            <span className="eyebrow">Maison de diamants — WAL &amp; Co</span>
+            <h1 className="mt-6 font-display text-6xl md:text-7xl lg:text-8xl leading-[1.02] tracking-tight">
               L'éclat rare, <br />
               <span className="text-diamond-gradient italic">taillé pour l'éternité.</span>
             </h1>
-            <p className="mt-8 max-w-lg text-base leading-relaxed text-muted-foreground">
-              WAL &amp; Co sélectionne, certifie et vous présente des diamants taillés
-              d'exception. Une maison au service des joailliers, grossistes,
-              investisseurs et amateurs de pierres précieuses.
+            <p className="mt-8 max-w-xl text-base md:text-lg leading-relaxed text-muted-foreground">
+              WAL &amp; Co sélectionne, taille et certifie des diamants naturels d'exception —
+              du brut congolais au sertissage final, avec transparence et savoir-faire.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link to="/collection" className="btn-gold btn-gold-hover">
@@ -47,31 +74,28 @@ function Index() {
                 Demander un devis
               </Link>
             </div>
-            <div className="mt-14 flex flex-wrap gap-8 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
+            <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
               <span className="flex items-center gap-2"><ShieldCheck size={14} className="text-gold" /> Certifié GIA · IGI</span>
               <span className="flex items-center gap-2"><Gem size={14} className="text-gold" /> Provenance tracée</span>
               <span className="flex items-center gap-2"><Award size={14} className="text-gold" /> Sélection maison</span>
             </div>
           </div>
+        </div>
 
-          <div className="relative fade-up">
-            <div className="absolute -inset-8 bg-gradient-to-br from-gold/20 via-transparent to-deep-blue/20 blur-3xl float-slow" />
-            <div className="img-dynamic relative aspect-[4/5] border border-border shadow-luxe">
-              <img
-                src={heroDiamond}
-                alt="Diamant taillé brillant WAL & Co"
-                width={1600}
-                height={2000}
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 card-lux p-5 hidden md:block">
-              <div className="text-[10px] tracking-[0.28em] uppercase text-gold">Signature</div>
-              <div className="mt-2 font-display text-2xl">Round Brilliant · 2.14 ct</div>
-              <div className="mt-1 text-xs text-muted-foreground">Couleur D · Pureté VVS1</div>
-            </div>
-          </div>
+        {/* Carte signature flottante */}
+        <div className="hidden lg:block absolute bottom-14 right-10 card-lux p-5 float-slow">
+          <div className="text-[10px] tracking-[0.28em] uppercase text-gold">Signature</div>
+          <div className="mt-2 font-display text-2xl">Round Brilliant · 2.14 ct</div>
+          <div className="mt-1 text-xs text-muted-foreground">Couleur D · Pureté VVS1</div>
+        </div>
+
+        {/* Indicateur de scroll */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
+          <span>Scroll</span>
+          <span className="w-px h-10 bg-gradient-to-b from-gold to-transparent" />
         </div>
       </section>
+
 
       {/* VALEURS */}
       <section className="border-y border-border/60 bg-card/40">
