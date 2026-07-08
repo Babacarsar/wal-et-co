@@ -31,7 +31,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h4 className="eyebrow">Home</h4>
+          <h4 className="eyebrow">Maison</h4>
           <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-gold">À propos</Link></li>
             <li><Link to="/collection" className="hover:text-gold">Collection</Link></li>
