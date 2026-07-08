@@ -145,13 +145,14 @@ function Index() {
       {/* ABOUT PREVIEW */}
       <section className="container-lux py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
         <div className="order-2 lg:order-1 relative">
-          <div className="absolute -inset-8 bg-gradient-to-tr from-deep-blue/40 via-transparent to-gold/10 blur-3xl" />
-          <img
-            src={aboutCraft}
-            alt="Expert examinant un diamant à la loupe"
-            loading="lazy"
-            className="relative w-full h-auto object-cover border border-border"
-          />
+          <div className="absolute -inset-8 bg-gradient-to-tr from-deep-blue/20 via-transparent to-gold/15 blur-3xl float-slow" />
+          <div className="img-dynamic relative aspect-[4/5] border border-border">
+            <img
+              src={aboutCraft}
+              alt="Expert examinant un diamant à la loupe"
+              loading="lazy"
+            />
+          </div>
         </div>
         <div className="order-1 lg:order-2">
           <span className="eyebrow">L'histoire WAL &amp; Co</span>
