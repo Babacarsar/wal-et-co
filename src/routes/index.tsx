@@ -33,32 +33,20 @@ function Index() {
     <SiteLayout>
       {/* HERO — full bleed cinématique */}
       <section className="relative min-h-[88vh] sm:min-h-[640px] lg:h-[92vh] w-full overflow-hidden flex items-center py-24 lg:py-0">
-        {/* Image de fond animée (ken-burns) */}
-        <div className="absolute inset-0">
+        {/* Image de fond animée — même style que collection & savoir-faire */}
+        <div className="img-dynamic absolute inset-0">
           <img
             src={heroDiamond}
             alt="Diamant taillé brillant WAL & Co"
-            className="w-full h-full object-cover"
-            style={{ animation: "ken-burns 22s ease-in-out infinite alternate" }}
           />
         </div>
 
         {/* Voile lumineux pour lisibilité + halo doré */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30 sm:from-background/85 sm:via-background/55 sm:to-background/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30 sm:from-background/85 sm:via-background/55 sm:to-background/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
         <div className="absolute -top-40 -right-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-gold/20 blur-[120px] float-slow pointer-events-none" />
         <div className="absolute -bottom-40 -left-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-accent/20 blur-[120px] float-slow pointer-events-none" />
 
-        {/* Effet shimmer sur toute la scène */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-40 mix-blend-overlay"
-          style={{
-            backgroundImage:
-              "linear-gradient(120deg, transparent 30%, oklch(1 0 0 / 40%) 50%, transparent 70%)",
-            backgroundSize: "200% 100%",
-            animation: "shimmer 9s linear infinite",
-          }}
-        />
 
         {/* Contenu */}
         <div className="relative container-lux w-full">
