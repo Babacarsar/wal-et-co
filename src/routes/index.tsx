@@ -95,7 +95,7 @@ function Index() {
 
 
       {/* VALEURS */}
-      <section className="border-y border-border/60 bg-card/40">
+      <section className="border-y border-border/60 bg-card/40 reveal">
         <div className="container-lux grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border/60">
           {[
             { icon: Gem, title: "Sélection rigoureuse", text: "Chaque pierre est choisie main." },
@@ -115,7 +115,7 @@ function Index() {
       </section>
 
       {/* COLLECTION FEATURED */}
-      <section className="container-lux py-16 sm:py-20 lg:py-28">
+      <section className="container-lux py-16 sm:py-20 lg:py-28 reveal">
         <div className="flex items-end justify-between gap-8 flex-wrap">
           <div>
             <span className="eyebrow">La Collection</span>
@@ -164,7 +164,7 @@ function Index() {
       </section>
 
       {/* ABOUT PREVIEW */}
-      <section className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center reveal">
         <div className="order-2 lg:order-1 relative">
           <div className="absolute -inset-8 bg-gradient-to-tr from-deep-blue/20 via-transparent to-gold/15 blur-3xl float-slow" />
           <div className="img-dynamic relative aspect-[4/5] border border-border">
@@ -197,7 +197,7 @@ function Index() {
       </section>
 
       {/* STATS */}
-      <section className="border-y border-border/60 bg-card/40">
+      <section className="border-y border-border/60 bg-card/40 reveal">
         <div className="container-lux py-12 sm:py-16 grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 text-center">
           {[
             { k: "20+", v: "années d'expertise" },
@@ -218,7 +218,7 @@ function Index() {
       </section>
 
       {/* PROCESS */}
-      <section className="container-lux py-16 sm:py-20 lg:py-28">
+      <section className="container-lux py-16 sm:py-20 lg:py-28 reveal">
         <div className="max-w-2xl">
           <span className="eyebrow">Notre processus</span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
@@ -272,7 +272,7 @@ function Index() {
       </section>
 
       {/* 4C GUIDE */}
-      <section className="border-y border-border/60 bg-card/30">
+      <section className="border-y border-border/60 bg-card/30 reveal">
         <div className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <span className="eyebrow">Guide d'achat</span>
@@ -320,7 +320,7 @@ function Index() {
       </section>
 
       {/* AUDIENCES */}
-      <section className="container-lux py-16 sm:py-20 lg:py-28">
+      <section className="container-lux py-16 sm:py-20 lg:py-28 reveal">
         <div className="max-w-2xl">
           <span className="eyebrow">Nous servons</span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
@@ -356,7 +356,7 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="border-y border-border/60 bg-card/30">
+      <section className="border-y border-border/60 bg-card/30 reveal">
         <div className="container-lux py-16 sm:py-20 lg:py-28">
           <div className="max-w-2xl">
             <span className="eyebrow">Ils nous font confiance</span>
@@ -400,7 +400,7 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section className="container-lux pb-24">
+      <section className="container-lux pb-24 reveal">
         <div className="card-lux relative overflow-hidden p-8 sm:p-12 lg:p-20 text-center">
           <div
             className="absolute inset-0 opacity-30"

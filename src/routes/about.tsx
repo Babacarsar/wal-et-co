@@ -56,7 +56,7 @@ function AboutPage() {
       </section>
 
       {/* HISTOIRE */}
-      <section className="container-lux py-16 sm:py-24">
+      <section className="container-lux py-16 sm:py-24 reveal">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Notre histoire</span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
@@ -104,7 +104,7 @@ function AboutPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="container-lux pb-16 sm:pb-24">
+      <section className="container-lux pb-16 sm:pb-24 reveal">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Nos services</span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
@@ -128,7 +128,7 @@ function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="container-lux pb-16 sm:pb-24">
+      <section className="container-lux pb-16 sm:pb-24 reveal">
         <div className="card-lux p-12 text-center">
           <span className="eyebrow">Rencontrons-nous</span>
           <h2 className="mt-4 font-display text-4xl">

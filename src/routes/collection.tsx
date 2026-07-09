@@ -61,7 +61,7 @@ function CollectionPage() {
         </div>
       </section>
 
-      <section className="container-lux pb-16 sm:pb-24">
+      <section className="container-lux pb-16 sm:pb-24 reveal">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {stones.map((s, i) => (
             <article key={s.ref} className="group card-lux overflow-hidden">
