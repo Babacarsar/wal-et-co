@@ -26,7 +26,7 @@ function AboutPage() {
       <section className="container-lux pt-20 lg:pt-28 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <span className="eyebrow">Notre maison</span>
-          <h1 className="mt-4 font-display text-5xl md:text-6xl leading-[1.05]">
+          <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05]">
             WAL &amp; Co : <span className="italic text-gold-gradient">l'excellence du diamant naturel.</span>
           </h1>
           <p className="mt-8 text-muted-foreground leading-relaxed">
@@ -55,7 +55,7 @@ function AboutPage() {
       <section className="container-lux py-24">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Notre histoire</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
             Des racines africaines, <span className="italic text-gold-gradient">une expertise canadienne.</span>
           </h2>
         </div>
@@ -87,11 +87,11 @@ function AboutPage() {
             </p>
             <div className="mt-8 grid grid-cols-2 gap-6">
               <div className="text-center">
-                <div className="font-display text-3xl text-gold">RDC</div>
+                <div className="font-display text-2xl sm:text-3xl text-gold">RDC</div>
                 <div className="mt-1 text-[10px] tracking-[0.22em] uppercase text-muted-foreground">Origine</div>
               </div>
               <div className="text-center">
-                <div className="font-display text-3xl text-gold">CA</div>
+                <div className="font-display text-2xl sm:text-3xl text-gold">CA</div>
                 <div className="mt-1 text-[10px] tracking-[0.22em] uppercase text-muted-foreground">Expertise</div>
               </div>
             </div>
@@ -103,7 +103,7 @@ function AboutPage() {
       <section className="container-lux pb-24">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Nos services</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
             De la mine à la <span className="italic text-gold-gradient">finition d'exception.</span>
           </h2>
         </div>

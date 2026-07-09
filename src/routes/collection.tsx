@@ -35,7 +35,7 @@ function CollectionPage() {
     <SiteLayout>
       <section className="container-lux pt-20 lg:pt-28 pb-10">
         <span className="eyebrow">Collection</span>
-        <h1 className="mt-4 font-display text-5xl md:text-6xl">
+        <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
           Chaque pierre, <span className="italic text-gold-gradient">une signature.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-muted-foreground">

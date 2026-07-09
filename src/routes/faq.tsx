@@ -165,7 +165,7 @@ function FaqPage() {
       <section className="container-lux pt-20 lg:pt-28 pb-12">
         <div className="max-w-3xl">
           <span className="eyebrow">Questions fréquentes</span>
-          <h1 className="mt-4 font-display text-5xl md:text-6xl">
+          <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
             Vos questions,{" "}
             <span className="italic text-gold-gradient">nos réponses.</span>
           </h1>
@@ -198,7 +198,7 @@ function FaqPage() {
           <div key={c.id} id={c.id} className="mt-16 scroll-mt-32">
             <div className="flex items-center gap-3">
               <c.icon size={20} className="text-gold" />
-              <h2 className="font-display text-3xl md:text-4xl">{c.title}</h2>
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl">{c.title}</h2>
             </div>
             <p className="mt-3 text-muted-foreground max-w-2xl">{c.intro}</p>
 
@@ -226,7 +226,7 @@ function FaqPage() {
       <section className="container-lux pb-24">
         <div className="card-lux p-10 lg:p-14 text-center">
           <HelpCircle size={28} className="text-gold mx-auto" />
-          <h2 className="mt-4 font-display text-3xl md:text-4xl">
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl md:text-4xl">
             Une question sans{" "}
             <span className="italic text-gold-gradient">réponse ?</span>
           </h2>

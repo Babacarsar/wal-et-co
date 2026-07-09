@@ -122,7 +122,7 @@ function Index() {
         <div className="flex items-end justify-between gap-8 flex-wrap">
           <div>
             <span className="eyebrow">La Collection</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
               Des pierres <span className="italic text-diamond-gradient">d'exception</span>
             </h2>
           </div>
@@ -180,7 +180,7 @@ function Index() {
         </div>
         <div className="order-1 lg:order-2">
           <span className="eyebrow">L'histoire WAL &amp; Co</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
             Un savoir-faire au service <span className="italic text-diamond-gradient">de la rareté</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -209,7 +209,7 @@ function Index() {
             { k: "24 h", v: "délai de réponse" },
           ].map((s) => (
             <div key={s.v}>
-              <div className="font-display text-4xl md:text-5xl text-diamond-gradient">
+              <div className="font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl text-diamond-gradient">
                 {s.k}
               </div>
               <div className="mt-2 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
@@ -224,7 +224,7 @@ function Index() {
       <section className="container-lux py-16 sm:py-20 lg:py-28">
         <div className="max-w-2xl">
           <span className="eyebrow">Notre processus</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
             De la mine <span className="italic text-diamond-gradient">à votre écrin</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -279,7 +279,7 @@ function Index() {
         <div className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <span className="eyebrow">Guide d'achat</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
               Comprendre les <span className="italic text-diamond-gradient">4C</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -326,14 +326,14 @@ function Index() {
       <section className="container-lux py-16 sm:py-20 lg:py-28">
         <div className="max-w-2xl">
           <span className="eyebrow">Nous servons</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
             Particuliers &amp; <span className="italic text-diamond-gradient">professionnels</span>
           </h2>
         </div>
         <div className="mt-14 grid md:grid-cols-2 gap-6">
           <div className="card-lux p-10">
             <Users size={22} className="text-gold" />
-            <h3 className="mt-6 font-display text-3xl">B2C — Particuliers</h3>
+            <h3 className="mt-6 font-display text-2xl sm:text-3xl">B2C — Particuliers</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Pour une bague de fiançailles, une pièce d'exception ou un
               investissement patrimonial, nous vous accompagnons de la
@@ -345,7 +345,7 @@ function Index() {
           </div>
           <div className="card-lux p-10">
             <Globe2 size={22} className="text-gold" />
-            <h3 className="mt-6 font-display text-3xl">B2B — Professionnels</h3>
+            <h3 className="mt-6 font-display text-2xl sm:text-3xl">B2B — Professionnels</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Joailliers, grossistes, bureaux d'achat : accédez à notre stock
               élargi, à nos conditions dédiées et à un service de recherche
@@ -363,7 +363,7 @@ function Index() {
         <div className="container-lux py-16 sm:py-20 lg:py-28">
           <div className="max-w-2xl">
             <span className="eyebrow">Ils nous font confiance</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
               La parole <span className="italic text-diamond-gradient">à nos clients</span>
             </h2>
           </div>
@@ -412,7 +412,7 @@ function Index() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
           <div className="relative">
             <span className="eyebrow">Sur mesure</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
               Une pierre en tête ? <span className="italic text-diamond-gradient">Nous la trouvons.</span>
             </h2>
             <p className="mt-6 max-w-xl mx-auto text-muted-foreground">
