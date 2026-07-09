@@ -65,12 +65,11 @@ function CollectionPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {stones.map((s, i) => (
             <article key={s.ref} className="group card-lux overflow-hidden">
-              <div className="aspect-[4/5] overflow-hidden bg-secondary/40">
+              <div className="img-dynamic aspect-[4/5] bg-secondary/40">
                 <img
                   src={i % 2 === 0 ? collectionDiamonds : heroDiamond}
                   alt={s.name}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
               <div className="p-6">

@@ -42,12 +42,16 @@ function AboutPage() {
           </div>
         </div>
         <div className="relative">
-          <div className="absolute -inset-8 bg-gradient-to-br from-gold/10 via-transparent to-deep-blue/30 blur-3xl" />
-          <img
-            src={aboutCraft}
-            alt="Expert examinant un diamant"
-            className="relative w-full h-auto object-cover border border-border"
-          />
+          <div className="absolute -inset-8 bg-gradient-to-br from-gold/10 via-transparent to-deep-blue/30 blur-3xl float-slow pointer-events-none" />
+          <div className="img-dynamic relative aspect-[4/5] border border-border">
+            <img
+              src={aboutCraft}
+              alt="Expert examinant un diamant"
+              loading="lazy"
+            />
+            <span className="img-sparkle" style={{ top: "18%", left: "62%" }} />
+            <span className="img-sparkle" style={{ top: "55%", left: "30%", animationDelay: "1.5s" }} />
+          </div>
         </div>
       </section>
 
