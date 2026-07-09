@@ -26,7 +26,7 @@ function ContactPage() {
       <section className="container-lux pt-14 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 grid lg:grid-cols-5 gap-12">
         <div className="lg:col-span-2">
           <span className="eyebrow">Contact</span>
-          <h1 className="mt-4 font-display text-5xl">
+          <h1 className="mt-4 font-display text-4xl sm:text-5xl leading-tight">
             Parlons de votre <span className="italic text-gold-gradient">pierre.</span>
           </h1>
           <p className="mt-6 text-muted-foreground leading-relaxed">
