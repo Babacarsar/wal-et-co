@@ -23,8 +23,10 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
   return (
     <SiteLayout>
-      <section className="container-lux pt-14 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 grid lg:grid-cols-5 gap-12">
-        <div className="lg:col-span-2">
+      <section className="relative container-lux pt-14 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 grid lg:grid-cols-5 gap-12 overflow-hidden">
+        <div className="halo-gold -top-20 -left-20 w-[420px] h-[420px]" />
+        <div className="halo-blue -bottom-20 -right-20 w-[420px] h-[420px]" />
+        <div className="lg:col-span-2 reveal relative">
           <span className="eyebrow">Contact</span>
           <h1 className="mt-4 font-display text-4xl sm:text-5xl leading-tight">
             Parlons de votre <span className="italic text-gold-gradient">pierre.</span>
@@ -63,7 +65,7 @@ function ContactPage() {
             e.preventDefault();
             setSent(true);
           }}
-          className="lg:col-span-3 card-lux p-6 sm:p-8 lg:p-10 space-y-5"
+          className="lg:col-span-3 card-lux p-6 sm:p-8 lg:p-10 space-y-5 reveal relative"
         >
           <div className="grid md:grid-cols-2 gap-5">
             <Field label="Nom complet" name="name" required />

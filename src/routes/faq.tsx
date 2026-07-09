@@ -162,8 +162,10 @@ function FaqPage() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="container-lux pt-14 sm:pt-20 lg:pt-28 pb-12">
-        <div className="max-w-3xl">
+      <section className="relative container-lux pt-14 sm:pt-20 lg:pt-28 pb-12 overflow-hidden">
+        <div className="halo-gold -top-24 -right-24 w-[440px] h-[440px]" />
+        <div className="halo-blue -bottom-24 -left-24 w-[440px] h-[440px]" />
+        <div className="max-w-3xl reveal relative">
           <span className="eyebrow">Questions fréquentes</span>
           <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
             Vos questions,{" "}
@@ -178,12 +180,12 @@ function FaqPage() {
         </div>
 
         {/* Nav catégories */}
-        <nav className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        <nav className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-3 relative">
           {categories.map((c) => (
             <a
               key={c.id}
               href={"#" + c.id}
-              className="card-lux p-4 flex items-center gap-3 hover:border-gold/60 transition-colors"
+              className="card-lux reveal p-4 flex items-center gap-3 hover:border-gold/60 hover:-translate-y-1 transition-all duration-300"
             >
               <c.icon size={18} className="text-gold shrink-0" />
               <span className="text-sm">{c.title}</span>
@@ -195,7 +197,7 @@ function FaqPage() {
       {/* CATEGORIES */}
       <section className="container-lux pb-16 sm:pb-24 max-w-4xl">
         {categories.map((c) => (
-          <div key={c.id} id={c.id} className="mt-16 scroll-mt-32">
+          <div key={c.id} id={c.id} className="mt-16 scroll-mt-32 reveal">
             <div className="flex items-center gap-3">
               <c.icon size={20} className="text-gold" />
               <h2 className="font-display text-2xl sm:text-3xl md:text-4xl">{c.title}</h2>
