@@ -26,7 +26,7 @@ function Index() {
   return (
     <SiteLayout>
       {/* HERO — full bleed cinématique */}
-      <section className="relative h-[92vh] min-h-[640px] w-full overflow-hidden">
+      <section className="relative min-h-[88vh] sm:min-h-[640px] lg:h-[92vh] w-full overflow-hidden flex items-center py-24 lg:py-0">
         {/* Image de fond animée (ken-burns) */}
         <div className="absolute inset-0">
           <img
@@ -38,10 +38,10 @@ function Index() {
         </div>
 
         {/* Voile lumineux pour lisibilité + halo doré */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/55 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30 sm:from-background/85 sm:via-background/55 sm:to-background/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-        <div className="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-gold/20 blur-[120px] float-slow pointer-events-none" />
-        <div className="absolute -bottom-40 -left-40 w-[520px] h-[520px] rounded-full bg-accent/20 blur-[120px] float-slow pointer-events-none" />
+        <div className="absolute -top-40 -right-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-gold/20 blur-[120px] float-slow pointer-events-none" />
+        <div className="absolute -bottom-40 -left-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-accent/20 blur-[120px] float-slow pointer-events-none" />
 
         {/* Effet shimmer sur toute la scène */}
         <div
@@ -55,42 +55,42 @@ function Index() {
         />
 
         {/* Contenu */}
-        <div className="relative container-lux h-full flex flex-col justify-center">
+        <div className="relative container-lux w-full">
           <div className="max-w-2xl fade-up">
             <span className="eyebrow">Maison de diamants — WAL &amp; Co</span>
-            <h1 className="mt-6 font-display text-6xl md:text-7xl lg:text-8xl leading-[1.02] tracking-tight">
-              L'éclat rare, <br />
+            <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight">
+              L'éclat rare, <br className="hidden sm:inline" />
               <span className="text-diamond-gradient italic">taillé pour l'éternité.</span>
             </h1>
-            <p className="mt-8 max-w-xl text-base md:text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
               WAL &amp; Co sélectionne, taille et certifie des diamants naturels d'exception —
               du brut congolais au sertissage final, avec transparence et savoir-faire.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/collection" className="btn-gold btn-gold-hover">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+              <Link to="/collection" className="btn-gold btn-gold-hover w-full sm:w-auto">
                 Découvrir la collection <ArrowRight size={14} />
               </Link>
-              <Link to="/contact" className="btn-outline-gold">
+              <Link to="/contact" className="btn-outline-gold w-full sm:w-auto">
                 Demander un devis
               </Link>
             </div>
-            <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
-              <span className="flex items-center gap-2"><ShieldCheck size={14} className="text-gold" /> Certifié GIA · IGI</span>
-              <span className="flex items-center gap-2"><Gem size={14} className="text-gold" /> Provenance tracée</span>
-              <span className="flex items-center gap-2"><Award size={14} className="text-gold" /> Sélection maison</span>
+            <div className="mt-10 sm:mt-14 flex flex-wrap gap-x-6 gap-y-3 text-[10px] sm:text-[11px] tracking-[0.2em] sm:tracking-[0.22em] uppercase text-muted-foreground">
+              <span className="flex items-center gap-2"><ShieldCheck size={14} className="text-gold shrink-0" /> Certifié GIA · IGI</span>
+              <span className="flex items-center gap-2"><Gem size={14} className="text-gold shrink-0" /> Provenance tracée</span>
+              <span className="flex items-center gap-2"><Award size={14} className="text-gold shrink-0" /> Sélection maison</span>
             </div>
           </div>
         </div>
 
         {/* Carte signature flottante */}
-        <div className="hidden lg:block absolute bottom-14 right-10 card-lux p-5 float-slow">
+        <div className="hidden xl:block absolute bottom-14 right-10 card-lux p-5 float-slow">
           <div className="text-[10px] tracking-[0.28em] uppercase text-gold">Signature</div>
           <div className="mt-2 font-display text-2xl">Round Brilliant · 2.14 ct</div>
           <div className="mt-1 text-xs text-muted-foreground">Couleur D · Pureté VVS1</div>
         </div>
 
         {/* Indicateur de scroll */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
+        <div className="hidden sm:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
           <span>Scroll</span>
           <span className="w-px h-10 bg-gradient-to-b from-gold to-transparent" />
         </div>
