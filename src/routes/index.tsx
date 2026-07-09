@@ -466,7 +466,7 @@ const featured = [
   {
     name: "Émeraude Royale",
     ref: "REF · WC-1120",
-    image: collectionDiamonds,
+    image: aboutCraft,
     specs: [
       { label: "Carat", value: "3.05" },
       { label: "Couleur", value: "F" },
