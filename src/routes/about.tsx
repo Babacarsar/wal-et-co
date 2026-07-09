@@ -79,7 +79,7 @@ function AboutPage() {
               informations nécessaires sur son origine et sa qualité.
             </p>
           </div>
-          <div className="card-lux p-10">
+          <div className="card-lux p-6 sm:p-8 md:p-10">
             <h3 className="font-display text-2xl">Notre engagement</h3>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
               Chez WAL &amp; Co, chaque diamant est plus qu'une pierre : c'est le résultat d'un
@@ -114,7 +114,7 @@ function AboutPage() {
             { icon: ClipboardCheck, title: "Certification", text: "Préparation et certification pour le marché international, avec traçabilité complète de l'origine." },
             { icon: Users, title: "Vente B2C et B2B", text: "Vente aux particuliers et aux professionnels, avec un accompagnement personnalisé à chaque étape." },
           ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="card-lux p-8">
+            <div key={title} className="card-lux p-6 sm:p-8">
               <Icon size={26} className="text-gold" />
               <h3 className="mt-6 font-display text-2xl">{title}</h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{text}</p>

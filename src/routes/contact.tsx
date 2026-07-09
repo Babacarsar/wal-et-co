@@ -63,7 +63,7 @@ function ContactPage() {
             e.preventDefault();
             setSent(true);
           }}
-          className="lg:col-span-3 card-lux p-8 lg:p-10 space-y-5"
+          className="lg:col-span-3 card-lux p-6 sm:p-8 lg:p-10 space-y-5"
         >
           <div className="grid md:grid-cols-2 gap-5">
             <Field label="Nom complet" name="name" required />

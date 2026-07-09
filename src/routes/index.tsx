@@ -260,7 +260,7 @@ function Index() {
               text: "Expédition assurée porte-à-porte par transporteur spécialisé, ou remise en main propre.",
             },
           ].map(({ icon: Icon, step, title, text }) => (
-            <li key={step} className="card-lux p-8 relative">
+            <li key={step} className="card-lux p-6 sm:p-8 relative">
               <div className="absolute top-6 right-6 text-[10px] tracking-[0.28em] text-gold/70">
                 {step}
               </div>
@@ -331,7 +331,7 @@ function Index() {
           </h2>
         </div>
         <div className="mt-14 grid md:grid-cols-2 gap-6">
-          <div className="card-lux p-10">
+          <div className="card-lux p-6 sm:p-8 md:p-10">
             <Users size={22} className="text-gold" />
             <h3 className="mt-6 font-display text-2xl sm:text-3xl">B2C — Particuliers</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -343,7 +343,7 @@ function Index() {
               Nous contacter
             </Link>
           </div>
-          <div className="card-lux p-10">
+          <div className="card-lux p-6 sm:p-8 md:p-10">
             <Globe2 size={22} className="text-gold" />
             <h3 className="mt-6 font-display text-2xl sm:text-3xl">B2B — Professionnels</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
@@ -385,7 +385,7 @@ function Index() {
                 r: "Grossiste · Anvers",
               },
             ].map((t) => (
-              <figure key={t.n} className="card-lux p-8">
+              <figure key={t.n} className="card-lux p-6 sm:p-8">
                 <Quote size={20} className="text-gold" />
                 <blockquote className="mt-6 text-muted-foreground leading-relaxed">
                   « {t.q} »
@@ -404,7 +404,7 @@ function Index() {
 
       {/* CTA */}
       <section className="container-lux pb-24">
-        <div className="card-lux relative overflow-hidden p-12 lg:p-20 text-center">
+        <div className="card-lux relative overflow-hidden p-8 sm:p-12 lg:p-20 text-center">
           <div
             className="absolute inset-0 opacity-30"
             style={{ backgroundImage: `url(${collectionDiamonds})`, backgroundSize: "cover", backgroundPosition: "center" }}

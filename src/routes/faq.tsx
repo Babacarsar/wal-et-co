@@ -224,7 +224,7 @@ function FaqPage() {
 
       {/* CTA */}
       <section className="container-lux pb-24">
-        <div className="card-lux p-10 lg:p-14 text-center">
+        <div className="card-lux p-6 sm:p-8 md:p-10 lg:p-14 text-center">
           <HelpCircle size={28} className="text-gold mx-auto" />
           <h2 className="mt-4 font-display text-2xl sm:text-3xl md:text-4xl">
             Une question sans{" "}
