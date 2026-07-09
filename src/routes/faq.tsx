@@ -180,12 +180,12 @@ function FaqPage() {
         </div>
 
         {/* Nav catégories */}
-        <nav className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        <nav className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-3 relative">
           {categories.map((c) => (
             <a
               key={c.id}
               href={"#" + c.id}
-              className="card-lux p-4 flex items-center gap-3 hover:border-gold/60 transition-colors"
+              className="card-lux reveal p-4 flex items-center gap-3 hover:border-gold/60 hover:-translate-y-1 transition-all duration-300"
             >
               <c.icon size={18} className="text-gold shrink-0" />
               <span className="text-sm">{c.title}</span>
