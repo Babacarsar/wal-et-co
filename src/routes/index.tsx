@@ -14,9 +14,15 @@ import {
   Users,
 } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
-import heroDiamond from "@/assets/hero-diamond.jpg";
-import collectionDiamonds from "@/assets/collection-diamonds.jpg";
-import aboutCraft from "@/assets/about-craft.jpg";
+import heroAsset from "@/assets/hero-diamonds.jpeg.asset.json";
+import cutAsset from "@/assets/diamonds-cut.jpeg.asset.json";
+import pouchAsset from "@/assets/diamonds-pouch.jpeg.asset.json";
+import roughAsset from "@/assets/diamonds-rough.jpeg.asset.json";
+
+const heroDiamond = heroAsset.url;
+const collectionDiamonds = cutAsset.url;
+const aboutCraft = roughAsset.url;
+const pouchDiamonds = pouchAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -438,7 +444,7 @@ const featured = [
   {
     name: "Solitaire Étoile",
     ref: "REF · WC-1042",
-    image: collectionDiamonds,
+    image: pouchDiamonds,
     specs: [
       { label: "Carat", value: "1.52" },
       { label: "Couleur", value: "D" },
@@ -460,7 +466,7 @@ const featured = [
   {
     name: "Émeraude Royale",
     ref: "REF · WC-1120",
-    image: collectionDiamonds,
+    image: aboutCraft,
     specs: [
       { label: "Carat", value: "3.05" },
       { label: "Couleur", value: "F" },
