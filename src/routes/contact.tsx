@@ -23,7 +23,7 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
   return (
     <SiteLayout>
-      <section className="container-lux pt-20 lg:pt-28 pb-24 grid lg:grid-cols-5 gap-12">
+      <section className="container-lux pt-14 sm:pt-20 lg:pt-28 pb-16 sm:pb-24 grid lg:grid-cols-5 gap-12">
         <div className="lg:col-span-2">
           <span className="eyebrow">Contact</span>
           <h1 className="mt-4 font-display text-5xl">

@@ -23,7 +23,7 @@ function AboutPage() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="container-lux pt-20 lg:pt-28 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="container-lux pt-14 sm:pt-20 lg:pt-28 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <span className="eyebrow">Notre maison</span>
           <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05]">
@@ -52,7 +52,7 @@ function AboutPage() {
       </section>
 
       {/* HISTOIRE */}
-      <section className="container-lux py-24">
+      <section className="container-lux py-16 sm:py-24">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Notre histoire</span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
@@ -100,7 +100,7 @@ function AboutPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="container-lux pb-24">
+      <section className="container-lux pb-16 sm:pb-24">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Nos services</span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
@@ -124,7 +124,7 @@ function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="container-lux pb-24">
+      <section className="container-lux pb-16 sm:pb-24">
         <div className="card-lux p-12 text-center">
           <span className="eyebrow">Rencontrons-nous</span>
           <h2 className="mt-4 font-display text-4xl">

@@ -33,7 +33,7 @@ const categories = ["Nouveautés", "Best-sellers", "Ronds", "Fantaisies", "+3 ca
 function CollectionPage() {
   return (
     <SiteLayout>
-      <section className="container-lux pt-20 lg:pt-28 pb-10">
+      <section className="container-lux pt-14 sm:pt-20 lg:pt-28 pb-10">
         <span className="eyebrow">Collection</span>
         <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
           Chaque pierre, <span className="italic text-gold-gradient">une signature.</span>
@@ -61,7 +61,7 @@ function CollectionPage() {
         </div>
       </section>
 
-      <section className="container-lux pb-24">
+      <section className="container-lux pb-16 sm:pb-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {stones.map((s, i) => (
             <article key={s.ref} className="group card-lux overflow-hidden">

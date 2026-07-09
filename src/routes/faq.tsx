@@ -162,7 +162,7 @@ function FaqPage() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="container-lux pt-20 lg:pt-28 pb-12">
+      <section className="container-lux pt-14 sm:pt-20 lg:pt-28 pb-12">
         <div className="max-w-3xl">
           <span className="eyebrow">Questions fréquentes</span>
           <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
@@ -193,7 +193,7 @@ function FaqPage() {
       </section>
 
       {/* CATEGORIES */}
-      <section className="container-lux pb-24 max-w-4xl">
+      <section className="container-lux pb-16 sm:pb-24 max-w-4xl">
         {categories.map((c) => (
           <div key={c.id} id={c.id} className="mt-16 scroll-mt-32">
             <div className="flex items-center gap-3">
@@ -223,7 +223,7 @@ function FaqPage() {
       </section>
 
       {/* CTA */}
-      <section className="container-lux pb-24">
+      <section className="container-lux pb-16 sm:pb-24">
         <div className="card-lux p-6 sm:p-8 md:p-10 lg:p-14 text-center">
           <HelpCircle size={28} className="text-gold mx-auto" />
           <h2 className="mt-4 font-display text-2xl sm:text-3xl md:text-4xl">
