@@ -419,7 +419,7 @@ function Index() {
               Décrivez-nous le diamant recherché — carat, couleur, clarté, taille,
               budget — nos experts vous répondent sous 24 h.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center">
               <Link to="/contact" className="btn-gold btn-gold-hover">
                 Demander une pierre
               </Link>
