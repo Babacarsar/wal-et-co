@@ -55,7 +55,7 @@ function AboutPage() {
       <section className="container-lux py-24">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Notre histoire</span>
-          <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
             Des racines africaines, <span className="italic text-gold-gradient">une expertise canadienne.</span>
           </h2>
         </div>
@@ -103,7 +103,7 @@ function AboutPage() {
       <section className="container-lux pb-24">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Nos services</span>
-          <h2 className="mt-4 font-display text-2xl sm:text-3xl sm:text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
             De la mine à la <span className="italic text-gold-gradient">finition d'exception.</span>
           </h2>
         </div>
