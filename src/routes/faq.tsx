@@ -197,7 +197,7 @@ function FaqPage() {
       {/* CATEGORIES */}
       <section className="container-lux pb-16 sm:pb-24 max-w-4xl">
         {categories.map((c) => (
-          <div key={c.id} id={c.id} className="mt-16 scroll-mt-32">
+          <div key={c.id} id={c.id} className="mt-16 scroll-mt-32 reveal">
             <div className="flex items-center gap-3">
               <c.icon size={20} className="text-gold" />
               <h2 className="font-display text-2xl sm:text-3xl md:text-4xl">{c.title}</h2>
