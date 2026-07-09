@@ -201,7 +201,7 @@ function Index() {
 
       {/* STATS */}
       <section className="border-y border-border/60 bg-card/40">
-        <div className="container-lux py-16 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+        <div className="container-lux py-12 sm:py-16 grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 text-center">
           {[
             { k: "20+", v: "années d'expertise" },
             { k: "100%", v: "diamants certifiés" },
