@@ -13,23 +13,23 @@ const nav = [
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/70 backdrop-blur-xl">
-      <div className="container-lux flex h-20 items-center justify-between">
-        <Link to="/" className="group flex items-baseline gap-2">
-          <span className="font-display text-2xl tracking-[0.2em] text-gold-gradient">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
+      <div className="container-lux flex h-16 md:h-20 items-center justify-between gap-4">
+        <Link to="/" className="group flex items-baseline gap-2 min-w-0 shrink-0">
+          <span className="font-display text-xl md:text-2xl tracking-[0.2em] text-gold-gradient">
             WAL
           </span>
-          <span className="text-xs tracking-[0.35em] text-muted-foreground group-hover:text-gold transition-colors">
+          <span className="text-[10px] md:text-xs tracking-[0.35em] text-muted-foreground group-hover:text-gold transition-colors">
             &amp; CO
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-10">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-[11px] font-medium tracking-[0.24em] uppercase text-muted-foreground hover:text-gold transition-colors"
+              className="text-[11px] font-medium tracking-[0.22em] uppercase text-muted-foreground hover:text-gold transition-colors whitespace-nowrap"
               activeProps={{ className: "text-gold" }}
               activeOptions={{ exact: true }}
             >
@@ -38,7 +38,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link to="/contact" className="hidden md:inline-flex btn-outline-gold text-[10px] py-2.5 px-5">
+        <Link to="/contact" className="hidden lg:inline-flex btn-outline-gold text-[10px] py-2.5 px-5">
           Demander un devis
         </Link>
 

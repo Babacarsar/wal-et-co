@@ -26,7 +26,7 @@ function Index() {
   return (
     <SiteLayout>
       {/* HERO — full bleed cinématique */}
-      <section className="relative h-[92vh] min-h-[640px] w-full overflow-hidden">
+      <section className="relative min-h-[88vh] sm:min-h-[640px] lg:h-[92vh] w-full overflow-hidden flex items-center py-24 lg:py-0">
         {/* Image de fond animée (ken-burns) */}
         <div className="absolute inset-0">
           <img
@@ -38,10 +38,10 @@ function Index() {
         </div>
 
         {/* Voile lumineux pour lisibilité + halo doré */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/55 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30 sm:from-background/85 sm:via-background/55 sm:to-background/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-        <div className="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-gold/20 blur-[120px] float-slow pointer-events-none" />
-        <div className="absolute -bottom-40 -left-40 w-[520px] h-[520px] rounded-full bg-accent/20 blur-[120px] float-slow pointer-events-none" />
+        <div className="absolute -top-40 -right-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-gold/20 blur-[120px] float-slow pointer-events-none" />
+        <div className="absolute -bottom-40 -left-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-accent/20 blur-[120px] float-slow pointer-events-none" />
 
         {/* Effet shimmer sur toute la scène */}
         <div
@@ -55,42 +55,42 @@ function Index() {
         />
 
         {/* Contenu */}
-        <div className="relative container-lux h-full flex flex-col justify-center">
+        <div className="relative container-lux w-full">
           <div className="max-w-2xl fade-up">
             <span className="eyebrow">Maison de diamants — WAL &amp; Co</span>
-            <h1 className="mt-6 font-display text-6xl md:text-7xl lg:text-8xl leading-[1.02] tracking-tight">
-              L'éclat rare, <br />
+            <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight">
+              L'éclat rare, <br className="hidden sm:inline" />
               <span className="text-diamond-gradient italic">taillé pour l'éternité.</span>
             </h1>
-            <p className="mt-8 max-w-xl text-base md:text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
               WAL &amp; Co sélectionne, taille et certifie des diamants naturels d'exception —
               du brut congolais au sertissage final, avec transparence et savoir-faire.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/collection" className="btn-gold btn-gold-hover">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+              <Link to="/collection" className="btn-gold btn-gold-hover w-full sm:w-auto">
                 Découvrir la collection <ArrowRight size={14} />
               </Link>
-              <Link to="/contact" className="btn-outline-gold">
+              <Link to="/contact" className="btn-outline-gold w-full sm:w-auto">
                 Demander un devis
               </Link>
             </div>
-            <div className="mt-14 flex flex-wrap gap-x-8 gap-y-3 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
-              <span className="flex items-center gap-2"><ShieldCheck size={14} className="text-gold" /> Certifié GIA · IGI</span>
-              <span className="flex items-center gap-2"><Gem size={14} className="text-gold" /> Provenance tracée</span>
-              <span className="flex items-center gap-2"><Award size={14} className="text-gold" /> Sélection maison</span>
+            <div className="mt-10 sm:mt-14 flex flex-wrap gap-x-6 gap-y-3 text-[10px] sm:text-[11px] tracking-[0.2em] sm:tracking-[0.22em] uppercase text-muted-foreground">
+              <span className="flex items-center gap-2"><ShieldCheck size={14} className="text-gold shrink-0" /> Certifié GIA · IGI</span>
+              <span className="flex items-center gap-2"><Gem size={14} className="text-gold shrink-0" /> Provenance tracée</span>
+              <span className="flex items-center gap-2"><Award size={14} className="text-gold shrink-0" /> Sélection maison</span>
             </div>
           </div>
         </div>
 
         {/* Carte signature flottante */}
-        <div className="hidden lg:block absolute bottom-14 right-10 card-lux p-5 float-slow">
+        <div className="hidden xl:block absolute bottom-14 right-10 card-lux p-5 float-slow">
           <div className="text-[10px] tracking-[0.28em] uppercase text-gold">Signature</div>
           <div className="mt-2 font-display text-2xl">Round Brilliant · 2.14 ct</div>
           <div className="mt-1 text-xs text-muted-foreground">Couleur D · Pureté VVS1</div>
         </div>
 
         {/* Indicateur de scroll */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
+        <div className="hidden sm:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
           <span>Scroll</span>
           <span className="w-px h-10 bg-gradient-to-b from-gold to-transparent" />
         </div>
@@ -99,18 +99,18 @@ function Index() {
 
       {/* VALEURS */}
       <section className="border-y border-border/60 bg-card/40">
-        <div className="container-lux grid md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-border/60">
+        <div className="container-lux grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border/60">
           {[
             { icon: Gem, title: "Sélection rigoureuse", text: "Chaque pierre est choisie main." },
             { icon: ShieldCheck, title: "Certification", text: "GIA, IGI et laboratoires reconnus." },
             { icon: Sparkles, title: "Éclat maîtrisé", text: "Taille et symétrie d'exception." },
             { icon: Award, title: "Confiance", text: "Provenance transparente et éthique." },
           ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="p-8 flex items-start gap-4">
-              <Icon size={22} className="text-gold mt-1 shrink-0" />
-              <div>
-                <div className="text-sm font-medium tracking-wide">{title}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{text}</div>
+            <div key={title} className="p-5 sm:p-6 md:p-8 flex items-start gap-3 sm:gap-4">
+              <Icon size={20} className="text-gold mt-1 shrink-0" />
+              <div className="min-w-0">
+                <div className="text-xs sm:text-sm font-medium tracking-wide">{title}</div>
+                <div className="mt-1 text-xs sm:text-sm text-muted-foreground">{text}</div>
               </div>
             </div>
           ))}
@@ -118,11 +118,11 @@ function Index() {
       </section>
 
       {/* COLLECTION FEATURED */}
-      <section className="container-lux py-24 lg:py-32">
+      <section className="container-lux py-16 sm:py-20 lg:py-28">
         <div className="flex items-end justify-between gap-8 flex-wrap">
           <div>
             <span className="eyebrow">La Collection</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
               Des pierres <span className="italic text-diamond-gradient">d'exception</span>
             </h2>
           </div>
@@ -131,7 +131,7 @@ function Index() {
           </Link>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
+        <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {featured.map((p) => (
             <article key={p.name} className="group card-lux overflow-hidden">
               <div className="img-dynamic aspect-square bg-secondary/40">
@@ -167,7 +167,7 @@ function Index() {
       </section>
 
       {/* ABOUT PREVIEW */}
-      <section className="container-lux py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center">
         <div className="order-2 lg:order-1 relative">
           <div className="absolute -inset-8 bg-gradient-to-tr from-deep-blue/20 via-transparent to-gold/15 blur-3xl float-slow" />
           <div className="img-dynamic relative aspect-[4/5] border border-border">
@@ -180,7 +180,7 @@ function Index() {
         </div>
         <div className="order-1 lg:order-2">
           <span className="eyebrow">L'histoire WAL &amp; Co</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
             Un savoir-faire au service <span className="italic text-diamond-gradient">de la rareté</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -201,7 +201,7 @@ function Index() {
 
       {/* STATS */}
       <section className="border-y border-border/60 bg-card/40">
-        <div className="container-lux py-16 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+        <div className="container-lux py-12 sm:py-16 grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 text-center">
           {[
             { k: "20+", v: "années d'expertise" },
             { k: "100%", v: "diamants certifiés" },
@@ -209,7 +209,7 @@ function Index() {
             { k: "24 h", v: "délai de réponse" },
           ].map((s) => (
             <div key={s.v}>
-              <div className="font-display text-4xl md:text-5xl text-diamond-gradient">
+              <div className="font-display text-3xl sm:text-4xl md:text-5xl text-diamond-gradient">
                 {s.k}
               </div>
               <div className="mt-2 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
@@ -221,10 +221,10 @@ function Index() {
       </section>
 
       {/* PROCESS */}
-      <section className="container-lux py-24 lg:py-32">
+      <section className="container-lux py-16 sm:py-20 lg:py-28">
         <div className="max-w-2xl">
           <span className="eyebrow">Notre processus</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
             De la mine <span className="italic text-diamond-gradient">à votre écrin</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -260,7 +260,7 @@ function Index() {
               text: "Expédition assurée porte-à-porte par transporteur spécialisé, ou remise en main propre.",
             },
           ].map(({ icon: Icon, step, title, text }) => (
-            <li key={step} className="card-lux p-8 relative">
+            <li key={step} className="card-lux p-6 sm:p-8 relative">
               <div className="absolute top-6 right-6 text-[10px] tracking-[0.28em] text-gold/70">
                 {step}
               </div>
@@ -276,10 +276,10 @@ function Index() {
 
       {/* 4C GUIDE */}
       <section className="border-y border-border/60 bg-card/30">
-        <div className="container-lux py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-start">
+        <div className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <span className="eyebrow">Guide d'achat</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
               Comprendre les <span className="italic text-diamond-gradient">4C</span>
             </h2>
             <p className="mt-6 text-muted-foreground leading-relaxed">
@@ -323,17 +323,17 @@ function Index() {
       </section>
 
       {/* AUDIENCES */}
-      <section className="container-lux py-24 lg:py-32">
+      <section className="container-lux py-16 sm:py-20 lg:py-28">
         <div className="max-w-2xl">
           <span className="eyebrow">Nous servons</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
             Particuliers &amp; <span className="italic text-diamond-gradient">professionnels</span>
           </h2>
         </div>
         <div className="mt-14 grid md:grid-cols-2 gap-6">
-          <div className="card-lux p-10">
+          <div className="card-lux p-6 sm:p-8 md:p-10">
             <Users size={22} className="text-gold" />
-            <h3 className="mt-6 font-display text-3xl">B2C — Particuliers</h3>
+            <h3 className="mt-6 font-display text-2xl sm:text-3xl">B2C — Particuliers</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Pour une bague de fiançailles, une pièce d'exception ou un
               investissement patrimonial, nous vous accompagnons de la
@@ -343,9 +343,9 @@ function Index() {
               Nous contacter
             </Link>
           </div>
-          <div className="card-lux p-10">
+          <div className="card-lux p-6 sm:p-8 md:p-10">
             <Globe2 size={22} className="text-gold" />
-            <h3 className="mt-6 font-display text-3xl">B2B — Professionnels</h3>
+            <h3 className="mt-6 font-display text-2xl sm:text-3xl">B2B — Professionnels</h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Joailliers, grossistes, bureaux d'achat : accédez à notre stock
               élargi, à nos conditions dédiées et à un service de recherche
@@ -360,14 +360,14 @@ function Index() {
 
       {/* TESTIMONIALS */}
       <section className="border-y border-border/60 bg-card/30">
-        <div className="container-lux py-24 lg:py-32">
+        <div className="container-lux py-16 sm:py-20 lg:py-28">
           <div className="max-w-2xl">
             <span className="eyebrow">Ils nous font confiance</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
               La parole <span className="italic text-diamond-gradient">à nos clients</span>
             </h2>
           </div>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {[
               {
                 q: "Une écoute rare et une pierre parfaite pour la bague de fiançailles. Le rapport GIA était joint, tout était limpide.",
@@ -385,7 +385,7 @@ function Index() {
                 r: "Grossiste · Anvers",
               },
             ].map((t) => (
-              <figure key={t.n} className="card-lux p-8">
+              <figure key={t.n} className="card-lux p-6 sm:p-8">
                 <Quote size={20} className="text-gold" />
                 <blockquote className="mt-6 text-muted-foreground leading-relaxed">
                   « {t.q} »
@@ -404,7 +404,7 @@ function Index() {
 
       {/* CTA */}
       <section className="container-lux pb-24">
-        <div className="card-lux relative overflow-hidden p-12 lg:p-20 text-center">
+        <div className="card-lux relative overflow-hidden p-8 sm:p-12 lg:p-20 text-center">
           <div
             className="absolute inset-0 opacity-30"
             style={{ backgroundImage: `url(${collectionDiamonds})`, backgroundSize: "cover", backgroundPosition: "center" }}
@@ -412,14 +412,14 @@ function Index() {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
           <div className="relative">
             <span className="eyebrow">Sur mesure</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
               Une pierre en tête ? <span className="italic text-diamond-gradient">Nous la trouvons.</span>
             </h2>
             <p className="mt-6 max-w-xl mx-auto text-muted-foreground">
               Décrivez-nous le diamant recherché — carat, couleur, clarté, taille,
               budget — nos experts vous répondent sous 24 h.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center">
               <Link to="/contact" className="btn-gold btn-gold-hover">
                 Demander une pierre
               </Link>

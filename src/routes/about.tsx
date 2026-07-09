@@ -23,10 +23,10 @@ function AboutPage() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="container-lux pt-20 lg:pt-28 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="container-lux pt-14 sm:pt-20 lg:pt-28 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <span className="eyebrow">Notre maison</span>
-          <h1 className="mt-4 font-display text-5xl md:text-6xl leading-[1.05]">
+          <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05]">
             WAL &amp; Co : <span className="italic text-gold-gradient">l'excellence du diamant naturel.</span>
           </h1>
           <p className="mt-8 text-muted-foreground leading-relaxed">
@@ -52,10 +52,10 @@ function AboutPage() {
       </section>
 
       {/* HISTOIRE */}
-      <section className="container-lux py-24">
+      <section className="container-lux py-16 sm:py-24">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Notre histoire</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
             Des racines africaines, <span className="italic text-gold-gradient">une expertise canadienne.</span>
           </h2>
         </div>
@@ -79,7 +79,7 @@ function AboutPage() {
               informations nécessaires sur son origine et sa qualité.
             </p>
           </div>
-          <div className="card-lux p-10">
+          <div className="card-lux p-6 sm:p-8 md:p-10">
             <h3 className="font-display text-2xl">Notre engagement</h3>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
               Chez WAL &amp; Co, chaque diamant est plus qu'une pierre : c'est le résultat d'un
@@ -87,11 +87,11 @@ function AboutPage() {
             </p>
             <div className="mt-8 grid grid-cols-2 gap-6">
               <div className="text-center">
-                <div className="font-display text-3xl text-gold">RDC</div>
+                <div className="font-display text-2xl sm:text-3xl text-gold">RDC</div>
                 <div className="mt-1 text-[10px] tracking-[0.22em] uppercase text-muted-foreground">Origine</div>
               </div>
               <div className="text-center">
-                <div className="font-display text-3xl text-gold">CA</div>
+                <div className="font-display text-2xl sm:text-3xl text-gold">CA</div>
                 <div className="mt-1 text-[10px] tracking-[0.22em] uppercase text-muted-foreground">Expertise</div>
               </div>
             </div>
@@ -100,10 +100,10 @@ function AboutPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="container-lux pb-24">
+      <section className="container-lux pb-16 sm:pb-24">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Nos services</span>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
             De la mine à la <span className="italic text-gold-gradient">finition d'exception.</span>
           </h2>
         </div>
@@ -114,7 +114,7 @@ function AboutPage() {
             { icon: ClipboardCheck, title: "Certification", text: "Préparation et certification pour le marché international, avec traçabilité complète de l'origine." },
             { icon: Users, title: "Vente B2C et B2B", text: "Vente aux particuliers et aux professionnels, avec un accompagnement personnalisé à chaque étape." },
           ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="card-lux p-8">
+            <div key={title} className="card-lux p-6 sm:p-8">
               <Icon size={26} className="text-gold" />
               <h3 className="mt-6 font-display text-2xl">{title}</h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{text}</p>
@@ -124,7 +124,7 @@ function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="container-lux pb-24">
+      <section className="container-lux pb-16 sm:pb-24">
         <div className="card-lux p-12 text-center">
           <span className="eyebrow">Rencontrons-nous</span>
           <h2 className="mt-4 font-display text-4xl">

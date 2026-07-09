@@ -134,8 +134,14 @@
 
 @utility container-lux {
   margin-inline: auto;
-  padding-inline: 1.5rem;
+  padding-inline: 1.25rem;
   max-width: 1240px;
+}
+@media (min-width: 640px) {
+  .container-lux { padding-inline: 1.75rem; }
+}
+@media (min-width: 1024px) {
+  .container-lux { padding-inline: 2.5rem; }
 }
 
 @utility eyebrow {
@@ -180,8 +186,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.75rem;
-  font-size: 0.78rem;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -190,6 +196,10 @@
   border: 1px solid oklch(0.7 0.14 82);
   transition: all 300ms ease;
   cursor: pointer;
+  white-space: nowrap;
+}
+@media (min-width: 768px) {
+  .btn-gold { padding: 0.9rem 1.75rem; font-size: 0.78rem; }
 }
 @utility btn-gold-hover {
   &:hover {
@@ -203,8 +213,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.9rem 1.75rem;
-  font-size: 0.78rem;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -213,11 +223,13 @@
   border: 1px solid var(--gold);
   transition: all 300ms ease;
   cursor: pointer;
-}
-@utility btn-outline-gold {
+  white-space: nowrap;
   &:hover {
     background: oklch(0.68 0.14 82 / 8%);
   }
+}
+@media (min-width: 768px) {
+  .btn-outline-gold { padding: 0.9rem 1.75rem; font-size: 0.78rem; }
 }
 
 @utility card-lux {
