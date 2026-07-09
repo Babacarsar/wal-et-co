@@ -118,7 +118,7 @@ function Index() {
       </section>
 
       {/* COLLECTION FEATURED */}
-      <section className="container-lux py-24 lg:py-32">
+      <section className="container-lux py-16 sm:py-20 lg:py-28">
         <div className="flex items-end justify-between gap-8 flex-wrap">
           <div>
             <span className="eyebrow">La Collection</span>
@@ -167,7 +167,7 @@ function Index() {
       </section>
 
       {/* ABOUT PREVIEW */}
-      <section className="container-lux py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
+      <section className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center">
         <div className="order-2 lg:order-1 relative">
           <div className="absolute -inset-8 bg-gradient-to-tr from-deep-blue/20 via-transparent to-gold/15 blur-3xl float-slow" />
           <div className="img-dynamic relative aspect-[4/5] border border-border">
@@ -221,7 +221,7 @@ function Index() {
       </section>
 
       {/* PROCESS */}
-      <section className="container-lux py-24 lg:py-32">
+      <section className="container-lux py-16 sm:py-20 lg:py-28">
         <div className="max-w-2xl">
           <span className="eyebrow">Notre processus</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">
@@ -276,7 +276,7 @@ function Index() {
 
       {/* 4C GUIDE */}
       <section className="border-y border-border/60 bg-card/30">
-        <div className="container-lux py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-start">
+        <div className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-start">
           <div>
             <span className="eyebrow">Guide d'achat</span>
             <h2 className="mt-4 font-display text-4xl md:text-5xl">
@@ -323,7 +323,7 @@ function Index() {
       </section>
 
       {/* AUDIENCES */}
-      <section className="container-lux py-24 lg:py-32">
+      <section className="container-lux py-16 sm:py-20 lg:py-28">
         <div className="max-w-2xl">
           <span className="eyebrow">Nous servons</span>
           <h2 className="mt-4 font-display text-4xl md:text-5xl">
@@ -360,7 +360,7 @@ function Index() {
 
       {/* TESTIMONIALS */}
       <section className="border-y border-border/60 bg-card/30">
-        <div className="container-lux py-24 lg:py-32">
+        <div className="container-lux py-16 sm:py-20 lg:py-28">
           <div className="max-w-2xl">
             <span className="eyebrow">Ils nous font confiance</span>
             <h2 className="mt-4 font-display text-4xl md:text-5xl">
