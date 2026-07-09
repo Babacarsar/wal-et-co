@@ -99,18 +99,18 @@ function Index() {
 
       {/* VALEURS */}
       <section className="border-y border-border/60 bg-card/40">
-        <div className="container-lux grid md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-border/60">
+        <div className="container-lux grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border/60">
           {[
             { icon: Gem, title: "Sélection rigoureuse", text: "Chaque pierre est choisie main." },
             { icon: ShieldCheck, title: "Certification", text: "GIA, IGI et laboratoires reconnus." },
             { icon: Sparkles, title: "Éclat maîtrisé", text: "Taille et symétrie d'exception." },
             { icon: Award, title: "Confiance", text: "Provenance transparente et éthique." },
           ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="p-8 flex items-start gap-4">
-              <Icon size={22} className="text-gold mt-1 shrink-0" />
-              <div>
-                <div className="text-sm font-medium tracking-wide">{title}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{text}</div>
+            <div key={title} className="p-5 sm:p-6 md:p-8 flex items-start gap-3 sm:gap-4">
+              <Icon size={20} className="text-gold mt-1 shrink-0" />
+              <div className="min-w-0">
+                <div className="text-xs sm:text-sm font-medium tracking-wide">{title}</div>
+                <div className="mt-1 text-xs sm:text-sm text-muted-foreground">{text}</div>
               </div>
             </div>
           ))}
