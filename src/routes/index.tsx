@@ -131,7 +131,7 @@ function Index() {
           </Link>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-6">
+        <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {featured.map((p) => (
             <article key={p.name} className="group card-lux overflow-hidden">
               <div className="img-dynamic aspect-square bg-secondary/40">
