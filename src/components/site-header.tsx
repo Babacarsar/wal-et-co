@@ -24,12 +24,12 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-10">
           {nav.map((item) => (
             <Link
               key={item.to}
               to={item.to}
-              className="text-[11px] font-medium tracking-[0.24em] uppercase text-muted-foreground hover:text-gold transition-colors"
+              className="text-[11px] font-medium tracking-[0.22em] uppercase text-muted-foreground hover:text-gold transition-colors whitespace-nowrap"
               activeProps={{ className: "text-gold" }}
               activeOptions={{ exact: true }}
             >
@@ -38,7 +38,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link to="/contact" className="hidden md:inline-flex btn-outline-gold text-[10px] py-2.5 px-5">
+        <Link to="/contact" className="hidden lg:inline-flex btn-outline-gold text-[10px] py-2.5 px-5">
           Demander un devis
         </Link>
 
