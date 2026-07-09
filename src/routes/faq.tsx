@@ -162,8 +162,10 @@ function FaqPage() {
   return (
     <SiteLayout>
       {/* HERO */}
-      <section className="container-lux pt-14 sm:pt-20 lg:pt-28 pb-12">
-        <div className="max-w-3xl">
+      <section className="relative container-lux pt-14 sm:pt-20 lg:pt-28 pb-12 overflow-hidden">
+        <div className="halo-gold -top-24 -right-24 w-[440px] h-[440px]" />
+        <div className="halo-blue -bottom-24 -left-24 w-[440px] h-[440px]" />
+        <div className="max-w-3xl reveal relative">
           <span className="eyebrow">Questions fréquentes</span>
           <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
             Vos questions,{" "}
