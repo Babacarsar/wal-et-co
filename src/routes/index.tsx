@@ -39,6 +39,9 @@ function Index() {
             src={heroDiamond}
             alt="Diamant taillé brillant WAL & Co"
           />
+          <span className="img-sparkle" style={{ top: "22%", left: "58%", animationDelay: "0s" }} />
+          <span className="img-sparkle" style={{ top: "44%", left: "72%", animationDelay: "1.1s" }} />
+          <span className="img-sparkle" style={{ top: "68%", left: "40%", animationDelay: "2.2s" }} />
         </div>
 
         {/* Voile lumineux pour lisibilité + halo doré */}
