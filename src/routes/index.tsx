@@ -367,7 +367,7 @@ function Index() {
               La parole <span className="italic text-diamond-gradient">à nos clients</span>
             </h2>
           </div>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {[
               {
                 q: "Une écoute rare et une pierre parfaite pour la bague de fiançailles. Le rapport GIA était joint, tout était limpide.",
