@@ -257,32 +257,90 @@
   box-shadow: 0 1px 0 oklch(1 0 0 / 60%) inset, 0 20px 40px -30px oklch(0.4 0.05 250 / 30%);
 }
 
-/* Photo dynamique : ken-burns + hover zoom + halo */
+/* Photo dynamique : reveal + ken-burns + hover tilt + shimmer + sparkle + light sweep */
 @utility img-dynamic {
   overflow: hidden;
   position: relative;
+  isolation: isolate;
+  perspective: 1200px;
+
   & > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: ken-burns 20s ease-in-out infinite alternate;
-    transition: transform 700ms ease, filter 700ms ease;
+    animation:
+      reveal-image 1.2s cubic-bezier(0.22, 1, 0.36, 1) both,
+      ken-burns 20s ease-in-out 1.2s infinite alternate;
+    transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1),
+                filter 600ms ease;
+    will-change: transform, filter;
   }
+
   &:hover > img {
-    transform: scale(1.08);
-    filter: brightness(1.05) contrast(1.05);
+    transform: scale(1.1) rotate(0.4deg);
+    filter: brightness(1.08) contrast(1.06) saturate(1.05);
   }
-  &::after {
+
+  /* Shimmer diagonal permanent */
+  &::before {
     content: "";
     position: absolute; inset: 0;
-    background: linear-gradient(120deg, transparent 30%, oklch(1 0 0 / 25%) 50%, transparent 70%);
+    background: linear-gradient(120deg, transparent 30%, oklch(1 0 0 / 28%) 50%, transparent 70%);
     background-size: 200% 100%;
     animation: shimmer 7s linear infinite;
     pointer-events: none;
     mix-blend-mode: overlay;
+    z-index: 1;
   }
+
+  /* Sweep de lumière au survol */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0;
+    width: 45%;
+    background: linear-gradient(
+      110deg,
+      transparent 20%,
+      oklch(1 0 0 / 55%) 50%,
+      transparent 80%
+    );
+    transform: translateX(-120%) skewX(-20deg);
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: screen;
+  }
+  &:hover::after {
+    animation: light-sweep 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+}
+
+/* Étincelles décoratives (à poser en enfant d'un img-dynamic) */
+@utility img-sparkle {
+  position: absolute;
+  width: 8px; height: 8px;
+  border-radius: 999px;
+  background: radial-gradient(circle, oklch(1 0 0 / 95%) 0%, oklch(1 0 0 / 0%) 70%);
+  box-shadow: 0 0 12px 2px oklch(1 0 0 / 60%);
+  pointer-events: none;
+  animation: sparkle 3.5s ease-in-out infinite;
+  z-index: 3;
 }
 
 @utility float-slow { animation: float 8s ease-in-out infinite; }
 @utility fade-up { animation: fade-up 900ms ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .img-dynamic > img,
+  .img-dynamic::before,
+  .img-dynamic::after,
+  .img-sparkle,
+  .float-slow,
+  .fade-up {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 
