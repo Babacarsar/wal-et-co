@@ -444,7 +444,7 @@ const featured = [
   {
     name: "Solitaire Étoile",
     ref: "REF · WC-1042",
-    image: collectionDiamonds,
+    image: pouchDiamonds,
     specs: [
       { label: "Carat", value: "1.52" },
       { label: "Couleur", value: "D" },
