@@ -14,15 +14,10 @@ import {
   Users,
 } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
-import heroAsset from "@/assets/hero-diamonds.jpeg.asset.json";
-import cutAsset from "@/assets/diamonds-cut.jpeg.asset.json";
-import pouchAsset from "@/assets/diamonds-pouch.jpeg.asset.json";
-import roughAsset from "@/assets/diamonds-rough.jpeg.asset.json";
-
-const heroDiamond = heroAsset.url;
-const collectionDiamonds = cutAsset.url;
-const aboutCraft = roughAsset.url;
-const pouchDiamonds = pouchAsset.url;
+import heroDiamond from "@/assets/hero-diamonds.jpeg";
+import collectionDiamonds from "@/assets/diamonds-cut.jpeg";
+import pouchDiamonds from "@/assets/diamonds-pouch.jpeg";
+import aboutCraft from "@/assets/diamonds-rough.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Index,
