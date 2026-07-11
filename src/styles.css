@@ -107,10 +107,10 @@
 
   --border: oklch(0.88 0.01 250);
   --input: oklch(0.9 0.01 250);
-  --ring: oklch(0.62 0.14 78);
+  --ring: #0F52BA;
 
-  --gold: oklch(0.68 0.14 82);
-  --gold-soft: oklch(0.78 0.09 82);
+  --gold: #0F52BA;
+  --gold-soft: #3D7DD9;
   --deep-blue: oklch(0.4 0.11 258);
   --diamond: oklch(0.55 0.05 250);
 }
