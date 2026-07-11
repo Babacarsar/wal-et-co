@@ -179,7 +179,7 @@
 }
 
 @utility text-gold-gradient {
-  background: linear-gradient(120deg, oklch(0.72 0.14 82), oklch(0.55 0.15 78), oklch(0.78 0.12 88));
+  background: linear-gradient(120deg, #3D7DD9, #0F52BA, #6B9BE8);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -210,8 +210,8 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: oklch(0.99 0.002 250);
-  background: linear-gradient(135deg, oklch(0.75 0.13 85), oklch(0.6 0.15 78));
-  border: 1px solid oklch(0.7 0.14 82);
+  background: linear-gradient(135deg, #3D7DD9, #0F52BA);
+  border: 1px solid #0F52BA;
   transition: all 300ms ease;
   cursor: pointer;
   white-space: nowrap;
@@ -221,7 +221,7 @@
 }
 @utility btn-gold-hover {
   &:hover {
-    box-shadow: 0 12px 30px -10px oklch(0.68 0.14 82 / 55%);
+    box-shadow: 0 12px 30px -10px rgb(15 82 186 / 55%);
     transform: translateY(-1px);
   }
 }
@@ -243,7 +243,7 @@
   cursor: pointer;
   white-space: nowrap;
   &:hover {
-    background: oklch(0.68 0.14 82 / 8%);
+    background: rgb(15 82 186 / 8%);
   }
 }
 @media (min-width: 768px) {
@@ -349,7 +349,7 @@
 @utility halo-gold {
   position: absolute;
   border-radius: 999px;
-  background: radial-gradient(circle, oklch(0.82 0.14 85 / 25%) 0%, transparent 70%);
+  background: radial-gradient(circle, rgb(15 82 186 / 25%) 0%, transparent 70%);
   filter: blur(80px);
   pointer-events: none;
   animation: float 9s ease-in-out infinite;
