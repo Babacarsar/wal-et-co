@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import walLogo from "@/assets/wal-logo.png.asset.json";
+const walLogo = { url: "/wal-logo.png" };
 
 const nav = [
   { to: "/", label: "Accueil" },
