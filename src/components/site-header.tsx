@@ -15,12 +15,12 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="container-lux flex h-36 md:h-48 items-center justify-between gap-4">
+      <div className="container-lux flex h-36 md:h-64 items-center justify-between gap-4">
         <Link to="/" className="group flex items-center min-w-0 shrink-0" aria-label="WAL & Co">
           <img
             src={walLogo.url}
             alt="WAL & Co — Diamants taillés certifiés"
-            className="h-32 md:h-44 w-auto object-contain"
+            className="h-32 md:h-60 w-auto object-contain"
           />
         </Link>
 
