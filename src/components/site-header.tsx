@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import walLogo from "@/assets/wal-logo.png.asset.json";
 
 const nav = [
   { to: "/", label: "Accueil" },
@@ -15,13 +16,12 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="container-lux flex h-16 md:h-20 items-center justify-between gap-4">
-        <Link to="/" className="group flex items-baseline gap-2 min-w-0 shrink-0">
-          <span className="font-display text-xl md:text-2xl tracking-[0.2em] text-gold-gradient">
-            WAL
-          </span>
-          <span className="text-[10px] md:text-xs tracking-[0.35em] text-muted-foreground group-hover:text-gold transition-colors">
-            &amp; CO
-          </span>
+        <Link to="/" className="group flex items-center min-w-0 shrink-0" aria-label="WAL & Co">
+          <img
+            src={walLogo.url}
+            alt="WAL & Co — Diamants taillés certifiés"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-10">
