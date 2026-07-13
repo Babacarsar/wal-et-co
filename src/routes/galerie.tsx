@@ -23,10 +23,10 @@ export const Route = createFileRoute("/galerie")({
   }),
   loader: ({ context }) => context.queryClient.ensureQueryData(galleryQuery),
   component: GaleriePage,
-  errorComponent: ({ error }) => (
+  errorComponent: () => (
     <SiteLayout>
       <section className="container-lux py-20">
-        <p className="text-muted-foreground">Impossible de charger la galerie. {error.message}</p>
+        <p className="text-muted-foreground">Impossible de charger la galerie.</p>
       </section>
     </SiteLayout>
   ),
