@@ -72,11 +72,9 @@ function Index() {
           <span className="img-sparkle" style={{ top: "68%", left: "40%", animationDelay: "2.2s" }} />
         </div>
 
-        {/* Voile lumineux pour lisibilité + halo doré */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/30 sm:from-background/85 sm:via-background/55 sm:to-background/20 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
-        <div className="absolute -top-40 -right-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-gold/20 blur-[120px] float-slow pointer-events-none" />
-        <div className="absolute -bottom-40 -left-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-accent/20 blur-[120px] float-slow pointer-events-none" />
+        {/* Léger voile pour lisibilité du texte, sans couleur d'arrière-plan */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent pointer-events-none" />
+
 
         {/* Indicateurs de slide */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
