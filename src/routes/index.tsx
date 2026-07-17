@@ -93,13 +93,13 @@ function Index() {
 
         {/* Contenu */}
         <div className="relative container-lux w-full">
-          <div className="max-w-2xl fade-up">
-            <span className="eyebrow">Maison de diamants — WAL &amp; Co</span>
-            <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight">
+          <div className="max-w-2xl fade-up text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.6)]">
+            <span className="eyebrow text-white/90">Maison de diamants — WAL &amp; Co</span>
+            <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight text-white">
               L'éclat rare, <br className="hidden sm:inline" />
               <span className="text-diamond-gradient italic">taillé pour l'éternité.</span>
             </h1>
-            <p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-white/85">
               WAL &amp; Co sélectionne, taille et certifie des diamants naturels d'exception —
               du brut congolais au sertissage final, avec transparence et savoir-faire.
             </p>
@@ -111,8 +111,9 @@ function Index() {
                 Demander un devis
               </Link>
             </div>
-            <div className="mt-10 sm:mt-14 flex flex-wrap gap-x-6 gap-y-3 text-[10px] sm:text-[11px] tracking-[0.2em] sm:tracking-[0.22em] uppercase text-muted-foreground">
+            <div className="mt-10 sm:mt-14 flex flex-wrap gap-x-6 gap-y-3 text-[10px] sm:text-[11px] tracking-[0.2em] sm:tracking-[0.22em] uppercase text-white/80">
               <span className="flex items-center gap-2"><ShieldCheck size={14} className="text-gold shrink-0" /> Certifié GIA · IGI</span>
+
               <span className="flex items-center gap-2"><Gem size={14} className="text-gold shrink-0" /> Provenance tracée</span>
               <span className="flex items-center gap-2"><Award size={14} className="text-gold shrink-0" /> Sélection maison</span>
             </div>
