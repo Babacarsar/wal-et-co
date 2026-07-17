@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   ShieldCheck,
@@ -14,7 +15,8 @@ import {
   Users,
 } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
-import heroDiamond from "@/assets/hero-diamonds.jpeg";
+import heroVideoAsset from "@/assets/hero-diamond-video.mp4.asset.json";
+import heroDiamondPhoto from "@/assets/hero-diamond-photo.jpg";
 import collectionDiamonds from "@/assets/diamonds-cut.jpeg";
 import pouchDiamonds from "@/assets/diamonds-pouch.jpeg";
 import aboutCraft from "@/assets/diamonds-rough.jpeg";
@@ -24,16 +26,47 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const id = window.setInterval(() => {
+      setSlide((s) => (s === 0 ? 1 : 0));
+    }, 7000);
+    return () => window.clearInterval(id);
+  }, []);
+
   return (
     <SiteLayout>
       {/* HERO — full bleed cinématique */}
       <section className="relative min-h-[88vh] sm:min-h-[640px] lg:h-[92vh] w-full overflow-hidden flex items-center py-24 lg:py-0">
-        {/* Image de fond animée — même style que collection & savoir-faire */}
-        <div className="img-dynamic absolute inset-0">
-          <img
-            src={heroDiamond}
-            alt="Diamant taillé brillant WAL & Co"
-          />
+        {/* Carrousel média : vidéo diamant → photo diamant */}
+        <div className="absolute inset-0 bg-black">
+          <div
+            className="absolute inset-0 flex w-[200%] h-full transition-transform duration-[1400ms] ease-[cubic-bezier(0.65,0,0.35,1)]"
+            style={{ transform: slide === 0 ? "translateX(0%)" : "translateX(-50%)" }}
+          >
+            <div className="relative w-1/2 h-full">
+              <video
+                src={heroVideoAsset.url}
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                poster={heroDiamondPhoto}
+              />
+            </div>
+            <div className="relative w-1/2 h-full">
+              <img
+                src={heroDiamondPhoto}
+                alt="Diamant taillé brillant WAL & Co en 4K"
+                className="absolute inset-0 w-full h-full object-cover"
+                width={1920}
+                height={1088}
+              />
+            </div>
+          </div>
           <span className="img-sparkle" style={{ top: "22%", left: "58%", animationDelay: "0s" }} />
           <span className="img-sparkle" style={{ top: "44%", left: "72%", animationDelay: "1.1s" }} />
           <span className="img-sparkle" style={{ top: "68%", left: "40%", animationDelay: "2.2s" }} />
@@ -44,6 +77,20 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent pointer-events-none" />
         <div className="absolute -top-40 -right-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-gold/20 blur-[120px] float-slow pointer-events-none" />
         <div className="absolute -bottom-40 -left-40 w-[380px] h-[380px] sm:w-[520px] sm:h-[520px] rounded-full bg-accent/20 blur-[120px] float-slow pointer-events-none" />
+
+        {/* Indicateurs de slide */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {[0, 1].map((i) => (
+            <button
+              key={i}
+              onClick={() => setSlide(i)}
+              aria-label={`Voir média ${i + 1}`}
+              className={`h-[3px] transition-all duration-500 ${
+                slide === i ? "w-10 bg-gold" : "w-5 bg-white/30 hover:bg-white/60"
+              }`}
+            />
+          ))}
+        </div>
 
 
         {/* Contenu */}
