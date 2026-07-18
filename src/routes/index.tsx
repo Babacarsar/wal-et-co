@@ -95,8 +95,8 @@ function Index() {
         <div className="relative container-lux w-full">
           <div className="max-w-2xl fade-up text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.7)]">
             <span className="eyebrow text-white/90">Maison de diamants — WAL &amp; Co</span>
-            <h1 className="mt-4 sm:mt-5 font-display text-[2.15rem] leading-[1.05] xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white break-words">
-              L'éclat rare, <br className="hidden sm:inline" />
+            <h1 className="mt-4 sm:mt-5 font-display text-[1.85rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white">
+              L'éclat rare,<br />
               <span className="text-diamond-gradient italic">taillé pour l'éternité.</span>
             </h1>
             <p className="mt-5 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
