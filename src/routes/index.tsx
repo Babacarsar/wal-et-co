@@ -124,7 +124,7 @@ function Index() {
         </div>
 
         {/* Carte signature flottante */}
-        <div className="hidden xl:block absolute bottom-14 right-10 card-lux p-5 float-slow">
+        <div className="hidden 2xl:block absolute bottom-14 right-10 card-lux p-5 float-slow">
           <div className="text-[10px] tracking-[0.28em] uppercase text-gold">Signature</div>
           <div className="mt-2 font-display text-2xl">Round Brilliant · 2.14 ct</div>
           <div className="mt-1 text-xs text-muted-foreground">Couleur D · Pureté VVS1</div>
