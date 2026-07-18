@@ -6,10 +6,9 @@ export function SiteFooter() {
     <footer className="mt-32 border-t border-border/60 bg-background/60">
       <div className="container-lux py-16 grid gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-baseline gap-2">
-            <span className="font-display text-3xl tracking-[0.2em] text-gold-gradient">WAL</span>
-            <span className="text-xs tracking-[0.35em] text-muted-foreground">&amp; CO</span>
-          </div>
+          <Link to="/" aria-label="WAL & Co" className="inline-block">
+            <img src="/wal-logo.png" alt="WAL & Co" className="h-24 md:h-28 w-auto object-contain" />
+          </Link>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
             Maison spécialisée dans les diamants taillés certifiés. Chaque pierre est
             sélectionnée pour son éclat, sa pureté et sa provenance responsable.
