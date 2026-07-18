@@ -38,7 +38,7 @@ function Index() {
   return (
     <SiteLayout>
       {/* HERO — full bleed cinématique */}
-      <section className="relative min-h-[88vh] sm:min-h-[640px] lg:h-[92vh] w-full overflow-hidden flex items-center py-24 lg:py-0">
+      <section className="relative min-h-[560px] sm:min-h-[640px] lg:h-[92vh] w-full overflow-hidden flex items-center py-16 sm:py-20 lg:py-0">
         {/* Carrousel média : vidéo diamant → photo diamant */}
         <div className="absolute inset-0 bg-black">
           <div
