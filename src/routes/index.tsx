@@ -38,7 +38,7 @@ function Index() {
   return (
     <SiteLayout>
       {/* HERO — full bleed cinématique */}
-      <section className="relative min-h-[88vh] sm:min-h-[640px] lg:h-[92vh] w-full overflow-hidden flex items-center py-24 lg:py-0">
+      <section className="relative min-h-[560px] sm:min-h-[640px] lg:h-[92vh] w-full overflow-hidden flex items-center py-16 sm:py-20 lg:py-0">
         {/* Carrousel média : vidéo diamant → photo diamant */}
         <div className="absolute inset-0 bg-black">
           <div
@@ -93,21 +93,24 @@ function Index() {
 
         {/* Contenu */}
         <div className="relative container-lux w-full">
-          <div className="max-w-2xl fade-up text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.6)]">
+          <div className="max-w-2xl fade-up text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.7)]">
             <span className="eyebrow text-white/90">Maison de diamants — WAL &amp; Co</span>
-            <h1 className="mt-5 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-[1.05] tracking-tight text-white">
-              L'éclat rare, <br className="hidden sm:inline" />
+            <h1 className="mt-4 sm:mt-5 font-display text-[1.85rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white">
+              L'éclat rare,<br />
               <span className="text-diamond-gradient italic">taillé pour l'éternité.</span>
             </h1>
-            <p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-white/85">
+            <p className="mt-5 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
               WAL &amp; Co sélectionne, taille et certifie des diamants naturels d'exception —
               du brut congolais au sertissage final, avec transparence et savoir-faire.
             </p>
-            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+            <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Link to="/collection" className="btn-gold btn-gold-hover w-full sm:w-auto">
                 Découvrir la collection <ArrowRight size={14} />
               </Link>
-              <Link to="/contact" className="btn-outline-gold w-full sm:w-auto">
+              <Link
+                to="/contact"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-3 border border-white/80 text-white text-[11px] sm:text-[12px] tracking-[0.22em] uppercase bg-white/5 backdrop-blur-sm hover:bg-white/15 transition-colors"
+              >
                 Demander un devis
               </Link>
             </div>
@@ -121,7 +124,7 @@ function Index() {
         </div>
 
         {/* Carte signature flottante */}
-        <div className="hidden xl:block absolute bottom-14 right-10 card-lux p-5 float-slow">
+        <div className="hidden 2xl:block absolute bottom-14 right-10 card-lux p-5 float-slow">
           <div className="text-[10px] tracking-[0.28em] uppercase text-gold">Signature</div>
           <div className="mt-2 font-display text-2xl">Round Brilliant · 2.14 ct</div>
           <div className="mt-1 text-xs text-muted-foreground">Couleur D · Pureté VVS1</div>
