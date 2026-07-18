@@ -45,9 +45,7 @@ export function SiteFooter() {
             <li>Montréal, Québec — Canada</li>
             <li>+1 (000) 000-0000</li>
             <li>contact@walandco.com</li>
-            <li className="pt-3 text-[11px] tracking-[0.2em] uppercase text-gold-soft">
-              Paiement sécurisé — Wire · Escrow
-            </li>
+
           </ul>
         </div>
       </div>
