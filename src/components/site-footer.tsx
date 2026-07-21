@@ -43,7 +43,7 @@ export function SiteFooter() {
           <h4 className="eyebrow">Coordonnées</h4>
           <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
             <li>Montréal, Québec — Canada</li>
-            <li>+1 (000) 000-0000</li>
+            <li><a href="tel:+15144483645" className="hover:text-gold">+1 (514) 448-3645</a></li>
             <li>contact@walandco.com</li>
 
           </ul>
