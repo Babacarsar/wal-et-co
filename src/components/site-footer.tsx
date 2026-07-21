@@ -20,7 +20,7 @@ export function SiteFooter() {
             <a href="#" aria-label="LinkedIn" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
               <Linkedin size={16} />
             </a>
-            <a href="https://wa.me/15144483645" aria-label="WhatsApp" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
+            <a href="#" aria-label="WhatsApp" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
               <MessageCircle size={16} />
             </a>
             <a href="mailto:contact@walandco.com" aria-label="Email" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
@@ -43,7 +43,7 @@ export function SiteFooter() {
           <h4 className="eyebrow">Coordonnées</h4>
           <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
             <li>Montréal, Québec — Canada</li>
-            <li><a href="tel:+15144483645" className="hover:text-gold">+1 (514) 448-3645</a></li>
+            <li><a href="tel:+00000000000" className="hover:text-gold">+0 (000) 000-0000</a></li>
             <li>contact@walandco.com</li>
 
           </ul>

@@ -39,8 +39,8 @@ function ContactPage() {
           <div className="mt-10 space-y-5">
             {[
               { icon: Mail, label: "Email", value: "contact@walandco.com", href: "mailto:contact@walandco.com" },
-              { icon: Phone, label: "Téléphone", value: "+1 (514) 448-3645", href: "tel:+15144483645" },
-              { icon: MessageCircle, label: "WhatsApp", value: "Chat direct", href: "https://wa.me/15144483645" },
+              { icon: Phone, label: "Téléphone", value: "+0 (000) 000-0000", href: "tel:+00000000000" },
+              { icon: MessageCircle, label: "WhatsApp", value: "Chat direct", href: "#" },
               { icon: MapPin, label: "Adresse", value: "Montréal, Québec — Canada" },
             ].map(({ icon: Icon, label, value, href }) => (
               <div key={label} className="flex items-start gap-4">
