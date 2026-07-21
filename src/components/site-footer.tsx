@@ -20,7 +20,7 @@ export function SiteFooter() {
             <a href="#" aria-label="LinkedIn" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
               <Linkedin size={16} />
             </a>
-            <a href="https://wa.me/" aria-label="WhatsApp" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
+            <a href="https://wa.me/15144483645" aria-label="WhatsApp" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
               <MessageCircle size={16} />
             </a>
             <a href="mailto:contact@walandco.com" aria-label="Email" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
