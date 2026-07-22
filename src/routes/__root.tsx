@@ -77,36 +77,64 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "WAL & Co — Diamants taillés certifiés" },
+      { title: "WAL & Co — Diamants taillés certifiés GIA/IGI | walandco.ca" },
       {
         name: "description",
         content:
-          "WAL & Co — Maison spécialisée dans les diamants taillés certifiés. Sélection, qualité et provenance pour joailliers, grossistes, investisseurs et particuliers.",
+          "WAL & Co — Maison canadienne de diamants naturels certifiés GIA/IGI. Sélection, taille et vente de diamants d'exception pour particuliers, joailliers et grossistes.",
       },
       { name: "author", content: "WAL & Co" },
-      { property: "og:title", content: "WAL & Co — Diamants taillés certifiés" },
-      {
-        property: "og:description",
-        content:
-          "Diamants d'exception, certifiés GIA/IGI. Collection, qualité et provenance transparente.",
-      },
+      { name: "keywords", content: "WAL & Co, walandco, diamants certifiés, GIA, IGI, diamants naturels, joaillerie Montréal, diamants Canada, diamants RDC, vente de diamants, bague de fiançailles, diamant sur mesure" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+      { name: "googlebot", content: "index, follow" },
+      { property: "og:site_name", content: "WAL & Co" },
+      { property: "og:locale", content: "fr_CA" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "WAL & Co — Diamants taillés certifiés" },
-      { name: "description", content: "WAL & Co — Maison spécialisée dans les diamants taillés certifiés. Sélection, qualité et provenance pour joailliers, grossistes, investisseurs et particuliers." },
-      { property: "og:description", content: "WAL & Co — Maison spécialisée dans les diamants taillés certifiés. Sélection, qualité et provenance pour joailliers, grossistes, investisseurs et particuliers." },
-      { name: "twitter:description", content: "WAL & Co — Maison spécialisée dans les diamants taillés certifiés. Sélection, qualité et provenance pour joailliers, grossistes, investisseurs et particuliers." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86c3af96-050d-4492-a66d-15d8d3974912/id-preview-c06abd45--3086f4cc-c6ef-4d06-a368-40bdcc2d1bf8.lovable.app-1783335145539.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/86c3af96-050d-4492-a66d-15d8d3974912/id-preview-c06abd45--3086f4cc-c6ef-4d06-a368-40bdcc2d1bf8.lovable.app-1783335145539.png" },
+      { name: "twitter:site", content: "@walandco" },
+      { name: "theme-color", content: "#0F52BA" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "WAL & Co",
+          alternateName: "walandco",
+          url: "https://walandco.ca",
+          logo: "https://walandco.ca/wal-logo.png",
+          description:
+            "Maison canadienne spécialisée dans les diamants naturels certifiés GIA/IGI — sélection, taille et vente pour particuliers et professionnels.",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Montréal",
+            addressRegion: "QC",
+            addressCountry: "CA",
+          },
+          sameAs: ["https://walandco.ca", "https://www.walandco.ca"],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "WAL & Co",
+          url: "https://walandco.ca",
+          inLanguage: "fr-CA",
+        }),
       },
     ],
   }),
