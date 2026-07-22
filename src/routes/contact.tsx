@@ -6,15 +6,18 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — WAL & Co" },
+      { title: "Contact — WAL & Co | Devis diamant sur mesure" },
       {
         name: "description",
         content:
-          "Contactez WAL & Co pour une demande d'information, un devis ou une recherche de diamant sur mesure. Réponse sous 24h.",
+          "Contactez WAL & Co pour un devis, une recherche de diamant sur mesure ou toute question. Réponse sous 24h par nos experts diamantaires.",
       },
       { property: "og:title", content: "Contact — WAL & Co" },
       { property: "og:description", content: "Une demande, un devis, une pierre sur mesure." },
+      { property: "og:url", content: "https://walandco.ca/contact" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://walandco.ca/contact" }],
   }),
   component: ContactPage,
 });
