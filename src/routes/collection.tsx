@@ -6,15 +6,18 @@ import heroDiamond from "@/assets/hero-diamond.jpg";
 export const Route = createFileRoute("/collection")({
   head: () => ({
     meta: [
-      { title: "Collection — WAL & Co" },
+      { title: "Collection de diamants certifiés — WAL & Co" },
       {
         name: "description",
         content:
-          "Découvrez la collection WAL & Co : diamants taillés certifiés, fiches techniques détaillées, carat, couleur, clarté et taille.",
+          "Collection WAL & Co : diamants taillés certifiés GIA/IGI. Fiches techniques détaillées — carat, couleur, clarté, taille — pour chaque pierre.",
       },
       { property: "og:title", content: "Collection — WAL & Co" },
       { property: "og:description", content: "Diamants taillés certifiés, sélection maison." },
+      { property: "og:url", content: "https://walandco.ca/collection" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://walandco.ca/collection" }],
   }),
   component: CollectionPage,
 });
