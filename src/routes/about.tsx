@@ -6,15 +6,18 @@ import { Diamond, Scissors, ClipboardCheck, Users, Store, MapPin, Globe } from "
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "À propos — WAL & Co" },
+      { title: "À propos — WAL & Co | Maison de diamants canadienne" },
       {
         name: "description",
         content:
-          "WAL & Co est une entreprise canadienne spécialisée dans les diamants naturels de haute qualité. Découvrez notre histoire et nos services.",
+          "WAL & Co, entreprise canadienne spécialisée dans les diamants naturels certifiés. Notre histoire, notre savoir-faire et notre engagement pour l'excellence.",
       },
       { property: "og:title", content: "À propos — WAL & Co" },
       { property: "og:description", content: "Notre maison, notre histoire, notre engagement pour l'excellence du diamant naturel." },
+      { property: "og:url", content: "https://walandco.ca/about" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://walandco.ca/about" }],
   }),
   component: AboutPage,
 });
