@@ -12,14 +12,18 @@ const galleryQuery = queryOptions({
 export const Route = createFileRoute("/galerie")({
   head: () => ({
     meta: [
-      { title: "Galerie — WAL & Co" },
+      { title: "Galerie — WAL & Co | Photos & vidéos de diamants" },
       {
         name: "description",
-        content: "Galerie photos et vidéos WAL & Co : diamants et pièces d'exception.",
+        content:
+          "Galerie WAL & Co : photos et vidéos haute définition de nos diamants naturels certifiés et pièces d'exception.",
       },
       { property: "og:title", content: "Galerie — WAL & Co" },
-      { property: "og:description", content: "Photos et vidéos de nos diamants." },
+      { property: "og:description", content: "Photos et vidéos de nos diamants d'exception." },
+      { property: "og:url", content: "https://walandco.ca/galerie" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://walandco.ca/galerie" }],
   }),
   loader: ({ context }) => context.queryClient.ensureQueryData(galleryQuery),
   component: GaleriePage,
