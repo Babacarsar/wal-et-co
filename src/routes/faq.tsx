@@ -18,19 +18,18 @@ import {
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — WAL & Co · Diamants certifiés" },
+      { title: "FAQ — WAL & Co | Certification, provenance, livraison" },
       {
         name: "description",
         content:
-          "Toutes les réponses sur nos diamants : certification GIA/IGI, provenance RDC, taille, livraison sécurisée, paiement, retour, sur-mesure et B2B.",
+          "FAQ WAL & Co : certification GIA/IGI, provenance, taille, livraison sécurisée, paiement, retour, sur-mesure et B2B. Toutes les réponses sur nos diamants.",
       },
       { property: "og:title", content: "FAQ — WAL & Co" },
-      {
-        property: "og:description",
-        content:
-          "Certification, provenance, livraison, paiement, sur-mesure et B2B — nos réponses.",
-      },
+      { property: "og:description", content: "Certification, provenance, livraison, paiement, sur-mesure et B2B." },
+      { property: "og:url", content: "https://walandco.ca/faq" },
+      { property: "og:type", content: "website" },
     ],
+    links: [{ rel: "canonical", href: "https://walandco.ca/faq" }],
   }),
   component: FaqPage,
 });
