@@ -22,6 +22,25 @@ import pouchDiamonds from "@/assets/diamonds-pouch.jpeg";
 import aboutCraft from "@/assets/diamonds-rough.jpeg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "WAL & Co — Diamants naturels taillés & certifiés GIA/IGI" },
+      {
+        name: "description",
+        content:
+          "WAL & Co : maison canadienne de diamants naturels certifiés GIA/IGI. Sélection, taille et vente de diamants d'exception — provenance transparente, service sur mesure.",
+      },
+      { property: "og:title", content: "WAL & Co — Diamants naturels taillés & certifiés" },
+      { property: "og:description", content: "Diamants d'exception certifiés GIA/IGI. Sélection, taille et service sur mesure." },
+      { property: "og:url", content: "https://walandco.ca/" },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://walandco.ca/wal-logo.png" },
+      { name: "twitter:image", content: "https://walandco.ca/wal-logo.png" },
+      { name: "twitter:title", content: "WAL & Co — Diamants certifiés" },
+      { name: "twitter:description", content: "Diamants naturels certifiés GIA/IGI." },
+    ],
+    links: [{ rel: "canonical", href: "https://walandco.ca/" }],
+  }),
   component: Index,
 });
 
