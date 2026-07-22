@@ -30,10 +30,12 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h4 className="eyebrow">Home</h4>
+          <h4 className="eyebrow">Navigation</h4>
           <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
-            <li><Link to="/about" className="hover:text-gold">À propos</Link></li>
+            <li><Link to="/" className="hover:text-gold">Accueil</Link></li>
             <li><Link to="/collection" className="hover:text-gold">Collection</Link></li>
+            <li><Link to="/galerie" className="hover:text-gold">Galerie</Link></li>
+            <li><Link to="/about" className="hover:text-gold">À propos</Link></li>
             <li><Link to="/faq" className="hover:text-gold">FAQ</Link></li>
             <li><Link to="/contact" className="hover:text-gold">Contact</Link></li>
           </ul>

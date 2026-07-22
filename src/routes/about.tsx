@@ -2,23 +2,25 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import aboutCraft from "@/assets/about-craft.jpg";
 import { Diamond, Scissors, ClipboardCheck, Users, Store, MapPin, Globe } from "lucide-react";
+import { buildPageSeo, breadcrumbJsonLd, aboutPageJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "À propos — WAL & Co | Maison de diamants canadienne" },
-      {
-        name: "description",
-        content:
-          "WAL & Co, entreprise canadienne spécialisée dans les diamants naturels certifiés. Notre histoire, notre savoir-faire et notre engagement pour l'excellence.",
-      },
-      { property: "og:title", content: "À propos — WAL & Co" },
-      { property: "og:description", content: "Notre maison, notre histoire, notre engagement pour l'excellence du diamant naturel." },
-      { property: "og:url", content: "https://walandco.ca/about" },
-      { property: "og:type", content: "website" },
-    ],
-    links: [{ rel: "canonical", href: "https://walandco.ca/about" }],
-  }),
+  head: () =>
+    buildPageSeo({
+      title: "À propos — WAL & Co | Maison de diamants canadienne",
+      description:
+        "WAL & Co, maison canadienne de diamants naturels certifiés GIA/IGI. Notre histoire, notre savoir-faire et notre engagement pour l'excellence et la traçabilité.",
+      path: "/about",
+      keywords:
+        "WAL & Co histoire, maison diamants Canada, diamants RDC, savoir-faire diamantaire, provenance éthique",
+      jsonLd: [
+        breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "À propos", path: "/about" },
+        ]),
+        aboutPageJsonLd(),
+      ],
+    }),
   component: AboutPage,
 });
 

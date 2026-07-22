@@ -2,23 +2,25 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { useState } from "react";
+import { buildPageSeo, breadcrumbJsonLd, contactPageJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — WAL & Co | Devis diamant sur mesure" },
-      {
-        name: "description",
-        content:
-          "Contactez WAL & Co pour un devis, une recherche de diamant sur mesure ou toute question. Réponse sous 24h par nos experts diamantaires.",
-      },
-      { property: "og:title", content: "Contact — WAL & Co" },
-      { property: "og:description", content: "Une demande, un devis, une pierre sur mesure." },
-      { property: "og:url", content: "https://walandco.ca/contact" },
-      { property: "og:type", content: "website" },
-    ],
-    links: [{ rel: "canonical", href: "https://walandco.ca/contact" }],
-  }),
+  head: () =>
+    buildPageSeo({
+      title: "Contact — WAL & Co | Devis diamant sur mesure Montréal",
+      description:
+        "Contactez WAL & Co pour un devis, une recherche de diamant sur mesure ou un compte pro. Réponse sous 24 h par nos experts diamantaires à Montréal.",
+      path: "/contact",
+      keywords:
+        "contact WAL & Co, devis diamant, diamant sur mesure Montréal, joaillier grossiste diamants",
+      jsonLd: [
+        breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ]),
+        contactPageJsonLd(),
+      ],
+    }),
   component: ContactPage,
 });
 

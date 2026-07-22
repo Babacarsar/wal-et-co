@@ -20,27 +20,32 @@ import heroDiamondPhoto from "@/assets/hero-diamond-photo.jpg";
 import collectionDiamonds from "@/assets/diamonds-cut.jpeg";
 import pouchDiamonds from "@/assets/diamonds-pouch.jpeg";
 import aboutCraft from "@/assets/diamonds-rough.jpeg";
+import { buildPageSeo, breadcrumbJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "WAL & Co — Diamants naturels taillés & certifiés GIA/IGI" },
-      {
-        name: "description",
-        content:
-          "WAL & Co : maison canadienne de diamants naturels certifiés GIA/IGI. Sélection, taille et vente de diamants d'exception — provenance transparente, service sur mesure.",
-      },
-      { property: "og:title", content: "WAL & Co — Diamants naturels taillés & certifiés" },
-      { property: "og:description", content: "Diamants d'exception certifiés GIA/IGI. Sélection, taille et service sur mesure." },
-      { property: "og:url", content: "https://walandco.ca/" },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://walandco.ca/wal-logo.png" },
-      { name: "twitter:image", content: "https://walandco.ca/wal-logo.png" },
-      { name: "twitter:title", content: "WAL & Co — Diamants certifiés" },
-      { name: "twitter:description", content: "Diamants naturels certifiés GIA/IGI." },
-    ],
-    links: [{ rel: "canonical", href: "https://walandco.ca/" }],
-  }),
+  head: () =>
+    buildPageSeo({
+      title: "WAL & Co — Diamants naturels taillés & certifiés GIA/IGI | Montréal",
+      description:
+        "WAL & Co : maison canadienne de diamants naturels certifiés GIA/IGI. Sélection, taille et vente de diamants d'exception — provenance transparente, service sur mesure à Montréal et international.",
+      path: "/",
+      keywords:
+        "diamants certifiés Montréal, diamants GIA, diamants IGI, diamants naturels Canada, bague de fiançailles diamant, WAL & Co, walandco",
+      jsonLd: [
+        breadcrumbJsonLd([{ name: "Accueil", path: "/" }]),
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "WAL & Co — Diamants naturels taillés & certifiés",
+          url: "https://walandco.ca/",
+          description:
+            "Maison canadienne de diamants naturels certifiés GIA/IGI. Sélection, taille et vente sur mesure.",
+          isPartOf: { "@id": "https://walandco.ca/#website" },
+          about: { "@id": "https://walandco.ca/#organization" },
+          inLanguage: "fr-CA",
+        },
+      ],
+    }),
   component: Index,
 });
 

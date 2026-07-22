@@ -1,6 +1,45 @@
+# WAL & Co — robots.txt
+# https://walandco.ca
+
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /auth
+Disallow: /api/
+
+# Google
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /auth
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /auth
+
+# AI / LLM crawlers (visibility in AI answers)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
 
 Sitemap: https://walandco.ca/sitemap.xml
+Host: https://walandco.ca

@@ -1,0 +1,29 @@
+# WAL & Co
+
+> Maison canadienne de diamants naturels certifiés GIA/IGI — sélection, taille et vente pour particuliers, joailliers et grossistes.
+
+Site: https://walandco.ca
+Contact: contact@walandco.com
+Localisation: Montréal, Québec, Canada
+
+## Pages
+
+- Accueil: https://walandco.ca/
+- Collection de diamants: https://walandco.ca/collection
+- Galerie photos & vidéos: https://walandco.ca/galerie
+- À propos: https://walandco.ca/about
+- FAQ: https://walandco.ca/faq
+- Contact / devis: https://walandco.ca/contact
+
+## Offre
+
+- Diamants naturels uniquement (pas de laboratoire)
+- Certifications: GIA, IGI, HRD
+- Critères: Carat, Couleur (D–H privilégié), Clarté (FL–VS2), Taille Excellent / Very Good
+- Clients: particuliers (bagues, investissement) et professionnels (B2B)
+- Provenance: principalement République démocratique du Congo, partenaires Afrique & Belgique
+- Livraison internationale sécurisée / remise en main propre
+
+## Sitemap
+
+https://walandco.ca/sitemap.xml

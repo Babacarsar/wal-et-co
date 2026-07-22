@@ -1,0 +1,26 @@
+{
+  "name": "WAL & Co",
+  "short_name": "WAL & Co",
+  "description": "Maison canadienne de diamants naturels certifiés GIA/IGI — sélection, taille et vente pour particuliers et professionnels.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0F52BA",
+  "lang": "fr-CA",
+  "dir": "ltr",
+  "categories": ["shopping", "business"],
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/wal-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

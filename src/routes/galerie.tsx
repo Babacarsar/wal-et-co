@@ -3,6 +3,7 @@ import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { Suspense } from "react";
 import { SiteLayout } from "@/components/site-layout";
 import { listMedia, type MediaItem } from "@/lib/media.functions";
+import { buildPageSeo, breadcrumbJsonLd, galleryPageJsonLd } from "@/lib/seo";
 
 const galleryQuery = queryOptions({
   queryKey: ["gallery"],
@@ -10,21 +11,22 @@ const galleryQuery = queryOptions({
 });
 
 export const Route = createFileRoute("/galerie")({
-  head: () => ({
-    meta: [
-      { title: "Galerie — WAL & Co | Photos & vidéos de diamants" },
-      {
-        name: "description",
-        content:
-          "Galerie WAL & Co : photos et vidéos haute définition de nos diamants naturels certifiés et pièces d'exception.",
-      },
-      { property: "og:title", content: "Galerie — WAL & Co" },
-      { property: "og:description", content: "Photos et vidéos de nos diamants d'exception." },
-      { property: "og:url", content: "https://walandco.ca/galerie" },
-      { property: "og:type", content: "website" },
-    ],
-    links: [{ rel: "canonical", href: "https://walandco.ca/galerie" }],
-  }),
+  head: () =>
+    buildPageSeo({
+      title: "Galerie — WAL & Co | Photos & vidéos de diamants certifiés",
+      description:
+        "Galerie WAL & Co : photos et vidéos haute définition de nos diamants naturels certifiés GIA/IGI et pièces d'exception.",
+      path: "/galerie",
+      keywords:
+        "galerie diamants, photos diamants, vidéos diamants, diamants WAL & Co, diamants certifiés images",
+      jsonLd: [
+        breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Galerie", path: "/galerie" },
+        ]),
+        galleryPageJsonLd(),
+      ],
+    }),
   loader: ({ context }) => context.queryClient.ensureQueryData(galleryQuery),
   component: GaleriePage,
   errorComponent: () => (

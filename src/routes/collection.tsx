@@ -2,25 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import collectionDiamonds from "@/assets/collection-diamonds.jpg";
 import heroDiamond from "@/assets/hero-diamond.jpg";
-
-export const Route = createFileRoute("/collection")({
-  head: () => ({
-    meta: [
-      { title: "Collection de diamants certifiés — WAL & Co" },
-      {
-        name: "description",
-        content:
-          "Collection WAL & Co : diamants taillés certifiés GIA/IGI. Fiches techniques détaillées — carat, couleur, clarté, taille — pour chaque pierre.",
-      },
-      { property: "og:title", content: "Collection — WAL & Co" },
-      { property: "og:description", content: "Diamants taillés certifiés, sélection maison." },
-      { property: "og:url", content: "https://walandco.ca/collection" },
-      { property: "og:type", content: "website" },
-    ],
-    links: [{ rel: "canonical", href: "https://walandco.ca/collection" }],
-  }),
-  component: CollectionPage,
-});
+import {
+  buildPageSeo,
+  breadcrumbJsonLd,
+  collectionItemListJsonLd,
+} from "@/lib/seo";
 
 const stones = [
   { name: "Solitaire Étoile", ref: "WC-1042", carat: "1.52", color: "D", clarity: "VVS1", cut: "Excellent", shape: "Rond" },
@@ -30,6 +16,26 @@ const stones = [
   { name: "Princesse Nuit", ref: "WC-1201", carat: "2.30", color: "E", clarity: "VVS1", cut: "Excellent", shape: "Princesse" },
   { name: "Poire Céleste", ref: "WC-1244", carat: "1.65", color: "F", clarity: "VS2", cut: "Very Good", shape: "Poire" },
 ];
+
+export const Route = createFileRoute("/collection")({
+  head: () =>
+    buildPageSeo({
+      title: "Collection de diamants certifiés GIA/IGI — WAL & Co",
+      description:
+        "Collection WAL & Co : diamants naturels taillés certifiés GIA/IGI. Fiches techniques — carat, couleur, clarté, taille — et devis sur mesure.",
+      path: "/collection",
+      keywords:
+        "collection diamants, diamants GIA, diamants IGI, diamant round brilliant, diamant émeraude, acheter diamant certifié",
+      jsonLd: [
+        breadcrumbJsonLd([
+          { name: "Accueil", path: "/" },
+          { name: "Collection", path: "/collection" },
+        ]),
+        collectionItemListJsonLd(stones),
+      ],
+    }),
+  component: CollectionPage,
+});
 
 const categories = ["Nouveautés", "Best-sellers", "Ronds", "Fantaisies", "+3 carats"];
 
@@ -71,8 +77,10 @@ function CollectionPage() {
               <div className="img-dynamic aspect-[4/5] bg-secondary/40">
                 <img
                   src={i % 2 === 0 ? collectionDiamonds : heroDiamond}
-                  alt={s.name}
+                  alt={`Diamant ${s.name} — ${s.carat} ct, couleur ${s.color}, clarté ${s.clarity}, ${s.shape} certifié WAL & Co`}
                   loading="lazy"
+                  width={800}
+                  height={1000}
                 />
               </div>
               <div className="p-6">

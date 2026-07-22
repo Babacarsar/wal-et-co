@@ -8,7 +8,8 @@ export const Route = createFileRoute("/auth")({
     meta: [
       { title: "Connexion — WAL & Co" },
       { name: "description", content: "Espace administrateur WAL & Co." },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, nofollow" },
+      { name: "googlebot", content: "noindex, nofollow" },
     ],
   }),
   component: AuthPage,
