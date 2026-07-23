@@ -23,7 +23,8 @@ export const Route = createFileRoute("/sitemap.xml")({
             priority: "1.0",
             images: [
               { loc: `${BASE_URL}/og-image.jpg`, title: "WAL & Co — Diamants naturels certifiés" },
-              { loc: `${BASE_URL}/wal-logo.png`, title: "Logo WAL & Co" },
+              { loc: `${BASE_URL}/logo-square.png`, title: "Logo WAL & Co" },
+              { loc: `${BASE_URL}/wal-logo.png`, title: "Logo bannière WAL & Co" },
             ],
           },
           {

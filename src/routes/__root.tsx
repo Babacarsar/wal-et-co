@@ -118,8 +118,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
-      { rel: "apple-touch-icon", href: "/favicon.png" },
+      // Google SERP favicon: square, multiple of 48px
+      { rel: "icon", href: "/favicon.png", type: "image/png", sizes: "96x96" },
+      { rel: "icon", href: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { rel: "icon", href: "/favicon-192.png", type: "image/png", sizes: "192x192" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
       { rel: "manifest", href: "/site.webmanifest" },
       { rel: "sitemap", type: "application/xml", href: "/sitemap.xml" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
