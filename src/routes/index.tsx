@@ -129,15 +129,10 @@ function Index() {
             </p>
             <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Link to="/collection" className="btn-gold btn-gold-hover w-full sm:w-auto">
-                Découvrir la collection <ArrowRight size={14} />
-              </Link>
-              <Link
-                to="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 sm:py-3 border border-white/80 text-white text-[11px] sm:text-[12px] tracking-[0.22em] uppercase bg-white/5 backdrop-blur-sm hover:bg-white/15 transition-colors"
-              >
-                Demander un devis
+                Découvrir nos diamants <ArrowRight size={14} />
               </Link>
             </div>
+
             <div className="mt-10 sm:mt-14 flex flex-wrap gap-x-6 gap-y-3 text-[10px] sm:text-[11px] tracking-[0.2em] sm:tracking-[0.22em] uppercase text-white/80">
               <span className="flex items-center gap-2"><ShieldCheck size={14} className="text-gold shrink-0" /> Certifié GIA · IGI</span>
 
