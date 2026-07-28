@@ -38,9 +38,6 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link to="/contact" className="hidden lg:inline-flex btn-outline-gold text-[10px] py-2.5 px-5">
-          Demander un devis
-        </Link>
 
         <button
           className="md:hidden text-foreground"
