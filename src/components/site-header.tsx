@@ -5,8 +5,7 @@ const walLogo = { url: "/wal-logo.png" };
 
 const nav = [
   { to: "/", label: "Accueil" },
-  { to: "/collection", label: "Collection" },
-  { to: "/galerie", label: "Galerie" },
+  { to: "/collection", label: "Nos Diamants" },
   { to: "/about", label: "À Propos" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
