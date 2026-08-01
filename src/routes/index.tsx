@@ -117,12 +117,13 @@ function Index() {
           <div className="max-w-2xl fade-up text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.7)]">
             <span className="eyebrow text-white/90">WAL &amp; Co</span>
             <h1 className="mt-4 sm:mt-5 font-display text-[1.85rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white">
-              L'excellence du<br />
-              <span className="text-diamond-gradient italic">diamant naturel.</span>
+              La nature crée,<br />
+              <span className="text-diamond-gradient italic">nous révélons l'excellence.</span>
             </h1>
             <p className="mt-5 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
               Des diamants naturels taillés avec précision. Certifiés pour inspirer confiance.
             </p>
+
             <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Link to="/collection" className="btn-gold btn-gold-hover w-full sm:w-auto">
                 Découvrir nos diamants <ArrowRight size={14} />
