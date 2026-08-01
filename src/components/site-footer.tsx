@@ -9,10 +9,14 @@ export function SiteFooter() {
           <Link to="/" aria-label="WAL & Co" className="inline-block">
             <img src="/wal-logo.png" alt="WAL & Co" className="h-24 md:h-28 w-auto object-contain" />
           </Link>
-          <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
+          <p className="mt-6 font-display text-xl md:text-2xl italic text-diamond-gradient">
+            La nature crée, nous révélons l'excellence.
+          </p>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-muted-foreground">
             Maison spécialisée dans les diamants taillés certifiés. Chaque pierre est
             sélectionnée pour son éclat, sa pureté et sa provenance responsable.
           </p>
+
           <div className="mt-6 flex gap-3">
             <a href="#" aria-label="Instagram" className="p-2 border border-border hover:border-gold hover:text-gold transition-colors">
               <Instagram size={16} />
