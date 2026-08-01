@@ -9,9 +9,6 @@ import {
   Search,
   Scissors,
   FileCheck,
-  Package,
-  Quote,
-  Globe2,
   Users,
 } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
