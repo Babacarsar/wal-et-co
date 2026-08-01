@@ -118,14 +118,13 @@ function Index() {
         {/* Contenu */}
         <div className="relative container-lux w-full">
           <div className="max-w-2xl fade-up text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.7)]">
-            <span className="eyebrow text-white/90">Maison de diamants — WAL &amp; Co</span>
+            <span className="eyebrow text-white/90">WAL &amp; Co</span>
             <h1 className="mt-4 sm:mt-5 font-display text-[1.85rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white">
-              L'éclat rare,<br />
-              <span className="text-diamond-gradient italic">taillé pour l'éternité.</span>
+              L'excellence du<br />
+              <span className="text-diamond-gradient italic">diamant naturel.</span>
             </h1>
             <p className="mt-5 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
-              WAL &amp; Co sélectionne, taille et certifie des diamants naturels d'exception —
-              du brut congolais au sertissage final, avec transparence et savoir-faire.
+              Des diamants naturels taillés avec précision. Certifiés pour inspirer confiance.
             </p>
             <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
               <Link to="/collection" className="btn-gold btn-gold-hover w-full sm:w-auto">
@@ -140,6 +139,7 @@ function Index() {
               <span className="flex items-center gap-2"><Award size={14} className="text-gold shrink-0" /> Sélection maison</span>
             </div>
           </div>
+
         </div>
 
         {/* Carte signature flottante */}
@@ -156,23 +156,60 @@ function Index() {
       </section>
 
 
-      {/* VALEURS */}
-      <section className="border-y border-border/60 bg-card/40 reveal">
-        <div className="container-lux grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-border/60">
-          {[
-            { icon: Gem, title: "Sélection rigoureuse", text: "Chaque pierre est choisie main." },
-            { icon: ShieldCheck, title: "Certification", text: "GIA, IGI et laboratoires reconnus." },
-            { icon: Sparkles, title: "Éclat maîtrisé", text: "Taille et symétrie d'exception." },
-            { icon: Award, title: "Confiance", text: "Provenance transparente et éthique." },
-          ].map(({ icon: Icon, title, text }) => (
-            <div key={title} className="p-5 sm:p-6 md:p-8 flex items-start gap-3 sm:gap-4">
-              <Icon size={20} className="text-gold mt-1 shrink-0" />
-              <div className="min-w-0">
-                <div className="text-xs sm:text-sm font-medium tracking-wide">{title}</div>
-                <div className="mt-1 text-xs sm:text-sm text-muted-foreground">{text}</div>
-              </div>
-            </div>
-          ))}
+      {/* BIENVENUE */}
+      <section className="container-lux py-16 sm:py-20 lg:py-24 reveal">
+        <div className="max-w-3xl">
+          <span className="eyebrow">Bienvenue chez WAL &amp; Co</span>
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
+            Une entreprise <span className="italic text-diamond-gradient">canadienne</span> du diamant naturel
+          </h2>
+          <p className="mt-6 text-muted-foreground leading-relaxed">
+            Bienvenue chez WAL &amp; Co, une entreprise canadienne spécialisée dans la sélection,
+            la taille, la certification et la commercialisation de diamants naturels.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Notre mission est de révéler toute la beauté et la valeur de chaque diamant grâce à un
+            savoir-faire rigoureux et à des standards de qualité élevés. Nous proposons des pierres
+            destinées aux joailliers, détaillants, grossistes et investisseurs qui recherchent
+            l'excellence, l'authenticité et la confiance.
+          </p>
+        </div>
+      </section>
+
+      {/* NOTRE EXPERTISE */}
+      <section className="border-y border-border/60 bg-card/30 reveal">
+        <div className="container-lux py-16 sm:py-20 lg:py-28">
+          <div className="max-w-2xl">
+            <span className="eyebrow">Notre expertise</span>
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
+              Trois savoir-faire <span className="italic text-diamond-gradient">complémentaires</span>
+            </h2>
+          </div>
+          <div className="mt-10 sm:mt-14 grid md:grid-cols-3 gap-5 sm:gap-6">
+            {[
+              {
+                icon: Scissors,
+                title: "Diamants naturels taillés",
+                text: "Chaque diamant est soigneusement sélectionné et taillé afin de maximiser son éclat, sa brillance et sa valeur.",
+              },
+              {
+                icon: FileCheck,
+                title: "Diamants certifiés",
+                text: "Nos diamants sont accompagnés d'une certification délivrée par des laboratoires gemmologiques reconnus, garantissant une évaluation indépendante de leurs caractéristiques.",
+              },
+              {
+                icon: Search,
+                title: "Diamants bruts sélectionnés",
+                text: "Lorsque certaines pierres sont mieux adaptées au marché du diamant brut, nous proposons également une sélection destinée aux professionnels : lapidaires, fabricants et négociants.",
+              },
+            ].map(({ icon: Icon, title, text }) => (
+              <article key={title} className="card-lux p-6 sm:p-8">
+                <Icon size={22} className="text-gold" />
+                <h3 className="mt-6 font-display text-2xl">{title}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -180,7 +217,7 @@ function Index() {
       <section className="container-lux py-16 sm:py-20 lg:py-28 reveal">
         <div className="flex items-end justify-between gap-8 flex-wrap">
           <div>
-            <span className="eyebrow">La Collection</span>
+            <span className="eyebrow">Nos diamants</span>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
               Des pierres <span className="italic text-diamond-gradient">d'exception</span>
             </h2>
@@ -194,11 +231,7 @@ function Index() {
           {featured.map((p) => (
             <article key={p.name} className="group card-lux overflow-hidden">
               <div className="img-dynamic aspect-square bg-secondary/40">
-                <img
-                  src={p.image}
-                  alt={p.name}
-                  loading="lazy"
-                />
+                <img src={p.image} alt={p.name} loading="lazy" />
               </div>
               <div className="p-6">
                 <div className="flex items-baseline justify-between">
@@ -225,239 +258,98 @@ function Index() {
         </div>
       </section>
 
-      {/* ABOUT PREVIEW */}
+      {/* NOTRE ENGAGEMENT */}
       <section className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center reveal">
         <div className="order-2 lg:order-1 relative">
           <div className="absolute -inset-8 bg-gradient-to-tr from-deep-blue/20 via-transparent to-gold/15 blur-3xl float-slow" />
           <div className="img-dynamic relative aspect-[4/5] border border-border">
-            <img
-              src={aboutCraft}
-              alt="Expert examinant un diamant à la loupe"
-              loading="lazy"
-            />
+            <img src={aboutCraft} alt="Diamants bruts sélectionnés par WAL & Co" loading="lazy" />
           </div>
         </div>
         <div className="order-1 lg:order-2">
-          <span className="eyebrow">L'histoire WAL &amp; Co</span>
+          <span className="eyebrow">Notre engagement</span>
           <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
-            Un savoir-faire au service <span className="italic text-diamond-gradient">de la rareté</span>
+            Intégrité et <span className="italic text-diamond-gradient">professionnalisme</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            Depuis nos origines, WAL &amp; Co œuvre à révéler l'âme des diamants.
-            Nos experts inspectent chaque pierre à la loupe — carat, couleur, clarté,
-            taille — pour ne retenir que celles qui méritent notre signature.
+            Chez WAL &amp; Co, nous croyons que chaque diamant mérite d'être présenté avec intégrité
+            et professionnalisme. Nous nous engageons à offrir :
           </p>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            Nous accompagnons joailliers, grossistes, investisseurs et particuliers
-            avec la même exigence : la transparence, la qualité, et le respect
-            de la provenance.
-          </p>
+          <ul className="mt-6 space-y-3">
+            {[
+              "Des diamants naturels de qualité.",
+              "Une sélection rigoureuse des pierres.",
+              "Une taille réalisée avec précision.",
+              "Une certification reconnue.",
+              "Une transparence dans chacune de nos transactions.",
+              "Un service personnalisé adapté aux besoins de chaque client.",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-sm sm:text-base text-muted-foreground">
+                <Sparkles size={15} className="text-gold mt-1 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
           <Link to="/about" className="mt-8 inline-flex btn-outline-gold">
             Notre maison
           </Link>
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="border-y border-border/60 bg-card/40 reveal">
-        <div className="container-lux py-12 sm:py-16 grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 text-center">
-          {[
-            { k: "20+", v: "années d'expertise" },
-            { k: "100%", v: "diamants certifiés" },
-            { k: "3", v: "continents desservis" },
-            { k: "24 h", v: "délai de réponse" },
-          ].map((s) => (
-            <div key={s.v}>
-              <div className="font-display text-3xl sm:text-4xl md:text-5xl text-diamond-gradient">
-                {s.k}
-              </div>
-              <div className="mt-2 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
-                {s.v}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* PROCESS */}
-      <section className="container-lux py-16 sm:py-20 lg:py-28 reveal">
-        <div className="max-w-2xl">
-          <span className="eyebrow">Notre processus</span>
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
-            De la mine <span className="italic text-diamond-gradient">à votre écrin</span>
-          </h2>
-          <p className="mt-6 text-muted-foreground leading-relaxed">
-            Un circuit court, maîtrisé à chaque étape, qui garantit la
-            traçabilité, l'éthique et la qualité de la pierre que vous recevez.
-          </p>
-        </div>
-
-        <ol className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              icon: Search,
-              step: "01",
-              title: "Approvisionnement",
-              text: "Sélection du brut à la source, en République démocratique du Congo et auprès de partenaires vérifiés.",
-            },
-            {
-              icon: Scissors,
-              step: "02",
-              title: "Taille & polissage",
-              text: "Optimisation par des maîtres-tailleurs pour révéler l'éclat, la symétrie et la brillance maximale.",
-            },
-            {
-              icon: FileCheck,
-              step: "03",
-              title: "Certification",
-              text: "Analyse indépendante par laboratoire reconnu — GIA, IGI, HRD — pour un rapport objectif.",
-            },
-            {
-              icon: Package,
-              step: "04",
-              title: "Livraison sécurisée",
-              text: "Expédition assurée porte-à-porte par transporteur spécialisé, ou remise en main propre.",
-            },
-          ].map(({ icon: Icon, step, title, text }) => (
-            <li key={step} className="card-lux p-6 sm:p-8 relative">
-              <div className="absolute top-6 right-6 text-[10px] tracking-[0.28em] text-gold/70">
-                {step}
-              </div>
-              <Icon size={22} className="text-gold" />
-              <h3 className="mt-6 font-display text-2xl">{title}</h3>
-              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                {text}
-              </p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* 4C GUIDE */}
-      <section className="border-y border-border/60 bg-card/30 reveal">
-        <div className="container-lux py-16 sm:py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <span className="eyebrow">Guide d'achat</span>
-            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
-              Comprendre les <span className="italic text-diamond-gradient">4C</span>
-            </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
-              Carat, Couleur, Clarté, Taille : les quatre critères universels
-              qui définissent la qualité d'un diamant. Chez WAL &amp; Co, nous
-              privilégions les gammes hautes de chaque axe.
-            </p>
-            <Link to="/collection" className="mt-8 inline-flex btn-outline-gold">
-              Voir la collection
-            </Link>
-          </div>
-
-          <dl className="space-y-4">
-            {[
-              {
-                t: "Carat",
-                d: "Le poids de la pierre. 1 carat = 0,2 gramme. La rareté croît de façon exponentielle avec le poids.",
-              },
-              {
-                t: "Couleur",
-                d: "De D (incolore, le plus rare) à Z (jaunâtre). Nous sélectionnons principalement D à H.",
-              },
-              {
-                t: "Clarté",
-                d: "De FL (sans inclusion) à I3. Nous privilégions FL à VS2 — pureté invisible à l'œil nu.",
-              },
-              {
-                t: "Taille",
-                d: "La qualité de la taille détermine l'éclat. Nous ne retenons que les grades Excellent et Very Good.",
-              },
-            ].map((c) => (
-              <div key={c.t} className="card-lux p-6">
-                <dt className="font-display text-2xl">{c.t}</dt>
-                <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                  {c.d}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
-
-      {/* AUDIENCES */}
-      <section className="container-lux py-16 sm:py-20 lg:py-28 reveal">
-        <div className="max-w-2xl">
-          <span className="eyebrow">Nous servons</span>
-          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
-            Particuliers &amp; <span className="italic text-diamond-gradient">professionnels</span>
-          </h2>
-        </div>
-        <div className="mt-14 grid md:grid-cols-2 gap-6">
-          <div className="card-lux p-6 sm:p-8 md:p-10">
-            <Users size={22} className="text-gold" />
-            <h3 className="mt-6 font-display text-2xl sm:text-3xl">B2C — Particuliers</h3>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              Pour une bague de fiançailles, une pièce d'exception ou un
-              investissement patrimonial, nous vous accompagnons de la
-              sélection à la livraison, avec discrétion et pédagogie.
-            </p>
-            <Link to="/contact" className="mt-8 inline-flex btn-outline-gold">
-              Nous contacter
-            </Link>
-          </div>
-          <div className="card-lux p-6 sm:p-8 md:p-10">
-            <Globe2 size={22} className="text-gold" />
-            <h3 className="mt-6 font-display text-2xl sm:text-3xl">B2B — Professionnels</h3>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              Joailliers, grossistes, bureaux d'achat : accédez à notre stock
-              élargi, à nos conditions dédiées et à un service de recherche
-              sur mesure, calibré pour vos volumes.
-            </p>
-            <Link to="/contact" className="mt-8 inline-flex btn-outline-gold">
-              Ouvrir un compte pro
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
+      {/* NOS CLIENTS */}
       <section className="border-y border-border/60 bg-card/30 reveal">
         <div className="container-lux py-16 sm:py-20 lg:py-28">
           <div className="max-w-2xl">
-            <span className="eyebrow">Ils nous font confiance</span>
+            <span className="eyebrow">Nos clients</span>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
-              La parole <span className="italic text-diamond-gradient">à nos clients</span>
+              Nous <span className="italic text-diamond-gradient">accompagnons</span>
             </h2>
           </div>
-          <div className="mt-10 sm:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-            {[
-              {
-                q: "Une écoute rare et une pierre parfaite pour la bague de fiançailles. Le rapport GIA était joint, tout était limpide.",
-                n: "Élise M.",
-                r: "Cliente particulière · Montréal",
-              },
-              {
-                q: "Nous travaillons avec WAL & Co pour nos pièces de haute joaillerie. Régularité, transparence, qualité : trois piliers.",
-                n: "Maison Vasseur",
-                r: "Joaillier · Paris",
-              },
-              {
-                q: "Un partenaire fiable pour nos achats en gros. Le sourcing en RDC leur donne un vrai avantage sur la traçabilité.",
-                n: "D. Cohen",
-                r: "Grossiste · Anvers",
-              },
-            ].map((t) => (
-              <figure key={t.n} className="card-lux p-6 sm:p-8">
-                <Quote size={20} className="text-gold" />
-                <blockquote className="mt-6 text-muted-foreground leading-relaxed">
-                  « {t.q} »
-                </blockquote>
-                <figcaption className="mt-8 border-t border-border/60 pt-5">
-                  <div className="font-display text-lg">{t.n}</div>
-                  <div className="mt-1 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
-                    {t.r}
-                  </div>
-                </figcaption>
-              </figure>
+          <ul className="mt-10 sm:mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {["Joailliers", "Détaillants", "Grossistes", "Manufacturiers", "Négociants", "Investisseurs"].map((c) => (
+              <li key={c} className="card-lux p-5 text-center">
+                <Users size={18} className="text-gold mx-auto" />
+                <div className="mt-3 text-[11px] tracking-[0.2em] uppercase">{c}</div>
+              </li>
             ))}
-          </div>
+          </ul>
+          <p className="mt-10 max-w-3xl text-muted-foreground leading-relaxed">
+            Que vous recherchiez un diamant taillé et certifié prêt à être monté sur un bijou ou un
+            diamant brut répondant à des critères spécifiques, WAL &amp; Co met son expertise à
+            votre service.
+          </p>
+        </div>
+      </section>
+
+      {/* NOTRE VISION */}
+      <section className="container-lux py-16 sm:py-20 lg:py-28 reveal">
+        <div className="max-w-3xl">
+          <span className="eyebrow">Notre vision</span>
+          <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
+            Un partenaire de confiance <span className="italic text-diamond-gradient">à l'international</span>
+          </h2>
+          <p className="mt-6 text-muted-foreground leading-relaxed">
+            Nous aspirons à devenir un partenaire de confiance sur le marché international du
+            diamant naturel, en offrant des pierres qui répondent aux plus hauts standards de
+            qualité, de transparence et de professionnalisme.
+          </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Notre objectif est de bâtir des relations durables avec nos clients grâce à un service
+            d'excellence et à une sélection de diamants répondant aux exigences du marché mondial.
+          </p>
+        </div>
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 text-center">
+          {[
+            { k: "Qualité", v: "diamants naturels" },
+            { k: "Rigueur", v: "sélection maison" },
+            { k: "Précision", v: "taille experte" },
+            { k: "Confiance", v: "certification reconnue" },
+          ].map((s) => (
+            <div key={s.v}>
+              <div className="font-display text-2xl sm:text-3xl md:text-4xl text-diamond-gradient">{s.k}</div>
+              <div className="mt-2 text-[11px] tracking-[0.22em] uppercase text-muted-foreground">{s.v}</div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -470,25 +362,29 @@ function Index() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/40" />
           <div className="relative">
-            <span className="eyebrow">Sur mesure</span>
+            <span className="eyebrow">WAL &amp; Co</span>
             <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
-              Une pierre en tête ? <span className="italic text-diamond-gradient">Nous la trouvons.</span>
+              Découvrez l'excellence <span className="italic text-diamond-gradient">du diamant naturel.</span>
             </h2>
             <p className="mt-6 max-w-xl mx-auto text-muted-foreground">
-              Décrivez-nous le diamant recherché — carat, couleur, clarté, taille,
-              budget — nos experts vous répondent sous 24 h.
+              Des pierres sélectionnées avec rigueur. Taillées avec précision. Certifiées pour
+              inspirer confiance.
             </p>
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center">
-              <Link to="/contact" className="btn-gold btn-gold-hover">
-                Demander une pierre
+              <Link to="/collection" className="btn-gold btn-gold-hover">
+                Explorer notre collection
               </Link>
-              <a href="https://wa.me/" className="btn-outline-gold">
-                Contact WhatsApp
-              </a>
+              <Link to="/contact" className="btn-outline-gold">
+                Demander une soumission
+              </Link>
+              <Link to="/contact" className="btn-outline-gold">
+                Nous contacter
+              </Link>
             </div>
           </div>
         </div>
       </section>
+
     </SiteLayout>
   );
 }
