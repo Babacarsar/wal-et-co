@@ -43,15 +43,20 @@ function CollectionPage() {
   return (
     <SiteLayout>
       <section className="container-lux pt-14 sm:pt-20 lg:pt-28 pb-10">
-        <span className="eyebrow">Collection</span>
+        <span className="eyebrow">Nos diamants</span>
         <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
-          Chaque pierre, <span className="italic text-gold-gradient">une signature.</span>
+          Nos diamants <span className="italic text-gold-gradient">naturels.</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-muted-foreground">
-          Notre collection réunit des diamants sélectionnés pour leur éclat, leur
-          pureté et leur provenance. Toutes les pierres sont accompagnées de leur
-          certificat gemmologique.
+        <p className="mt-6 max-w-2xl text-muted-foreground leading-relaxed">
+          Chaque diamant proposé par WAL &amp; Co est sélectionné avec soin, taillé avec précision
+          et, lorsqu'il est vendu comme diamant certifié, accompagné d'un certificat gemmologique
+          délivré par un laboratoire reconnu.
         </p>
+        <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">
+          Notre inventaire évolue régulièrement. Pour connaître les diamants actuellement
+          disponibles, nous vous invitons à communiquer avec notre équipe.
+        </p>
+
 
         <div className="mt-10 flex flex-wrap gap-3">
           {categories.map((c, i) => (
