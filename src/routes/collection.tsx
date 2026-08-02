@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import collectionDiamonds from "@/assets/collection-diamonds.jpg";
-import heroDiamond from "@/assets/hero-diamond.jpg";
 import solitaireEtoile from "@/assets/solitaire-etoile.png";
 import emeraudeRoyale from "@/assets/emeraude-royale.png";
 import {
@@ -14,9 +13,6 @@ const stones = [
   { name: "Solitaire Étoile", ref: "WC-1042", carat: "1.52", color: "D", clarity: "VVS1", cut: "Excellent", shape: "Rond", image: solitaireEtoile },
   { name: "Round Brilliant", ref: "WC-1088", carat: "2.14", color: "E", clarity: "VS1", cut: "Excellent", shape: "Rond", image: collectionDiamonds },
   { name: "Émeraude Royale", ref: "WC-1120", carat: "3.05", color: "F", clarity: "VVS2", cut: "Very Good", shape: "Émeraude", image: emeraudeRoyale },
-  { name: "Ovale Impérial", ref: "WC-1155", carat: "1.87", color: "D", clarity: "IF", cut: "Excellent", shape: "Ovale", image: heroDiamond },
-  { name: "Princesse Nuit", ref: "WC-1201", carat: "2.30", color: "E", clarity: "VVS1", cut: "Excellent", shape: "Princesse", image: collectionDiamonds },
-  { name: "Poire Céleste", ref: "WC-1244", carat: "1.65", color: "F", clarity: "VS2", cut: "Very Good", shape: "Poire", image: heroDiamond },
 ];
 
 export const Route = createFileRoute("/collection")({
