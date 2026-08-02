@@ -15,8 +15,9 @@ import { SiteLayout } from "@/components/site-layout";
 import heroVideoAsset from "@/assets/hero-diamond-video.mp4.asset.json";
 import heroDiamondPhoto from "@/assets/hero-diamond-photo.jpg";
 import collectionDiamonds from "@/assets/diamonds-cut.jpeg";
-import pouchDiamonds from "@/assets/diamonds-pouch.jpeg";
 import aboutCraft from "@/assets/diamonds-rough.jpeg";
+import solitaireEtoile from "@/assets/solitaire-etoile.png";
+import emeraudeRoyale from "@/assets/emeraude-royale.png";
 import { buildPageSeo, breadcrumbJsonLd } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -392,7 +393,7 @@ const featured = [
   {
     name: "Solitaire Étoile",
     ref: "REF · WC-1042",
-    image: pouchDiamonds,
+    image: solitaireEtoile,
     specs: [
       { label: "Carat", value: "1.52" },
       { label: "Couleur", value: "D" },
@@ -414,7 +415,7 @@ const featured = [
   {
     name: "Émeraude Royale",
     ref: "REF · WC-1120",
-    image: aboutCraft,
+    image: emeraudeRoyale,
     specs: [
       { label: "Carat", value: "3.05" },
       { label: "Couleur", value: "F" },
