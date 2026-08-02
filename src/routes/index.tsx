@@ -93,8 +93,8 @@ function Index() {
           <span className="img-sparkle" style={{ top: "68%", left: "40%", animationDelay: "2.2s" }} />
         </div>
 
-        {/* Léger voile pour lisibilité du texte, sans couleur d'arrière-plan */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent pointer-events-none" />
+        {/* Voile pour lisibilité du slogan sur le média */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-black/10 pointer-events-none" />
 
 
         {/* Indicateurs de slide */}
@@ -114,13 +114,14 @@ function Index() {
 
         {/* Contenu */}
         <div className="relative container-lux w-full">
-          <div className="max-w-2xl fade-up text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.7)]">
-            <span className="eyebrow text-white/90">WAL &amp; Co</span>
-            <h1 className="mt-4 sm:mt-5 font-display text-[1.85rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white">
-              La nature crée,<br />
-              <span className="text-diamond-gradient italic">nous révélons l'excellence.</span>
+          <div className="max-w-3xl lg:max-w-4xl fade-up [text-shadow:0_2px_28px_rgba(0,0,0,0.9),0_6px_60px_rgba(0,0,0,0.55)]">
+            <h1 className="font-display text-[2.35rem] leading-[1.04] sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.75rem] tracking-tight font-medium">
+              <span className="block text-white">La nature crée,</span>
+              <span className="mt-2 sm:mt-3 block italic bg-gradient-to-r from-white via-[#8BB4F0] to-[#3D7DD9] bg-clip-text text-transparent">
+                nous révélons l'excellence.
+              </span>
             </h1>
-            <p className="mt-5 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-white/90">
+            <p className="mt-6 sm:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-white/85">
               Des diamants naturels taillés avec précision. Certifiés pour inspirer confiance.
             </p>
 
