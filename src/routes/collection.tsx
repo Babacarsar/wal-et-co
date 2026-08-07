@@ -113,7 +113,7 @@ function CollectionPage() {
                   to="/contact"
                   className="mt-6 inline-flex btn-outline-gold text-[10px] py-2.5 px-4 w-full"
                 >
-                  Demander le prix
+                  En savoir plus
                 </Link>
               </div>
             </article>

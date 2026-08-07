@@ -233,23 +233,12 @@ function Index() {
                 <img src={p.image} alt={p.name} loading="lazy" />
               </div>
               <div className="p-6">
-                <div className="flex items-baseline justify-between">
-                  <h3 className="font-display text-2xl">{p.name}</h3>
-                  <span className="text-[10px] tracking-[0.22em] uppercase text-gold">{p.ref}</span>
-                </div>
-                <dl className="mt-4 grid grid-cols-4 gap-2 text-xs">
-                  {p.specs.map((s) => (
-                    <div key={s.label}>
-                      <dt className="text-[10px] tracking-[0.18em] uppercase text-muted-foreground">{s.label}</dt>
-                      <dd className="mt-1 text-foreground">{s.value}</dd>
-                    </div>
-                  ))}
-                </dl>
+                <h3 className="font-display text-2xl text-center">{p.name}</h3>
                 <Link
                   to="/contact"
-                  className="mt-6 inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase text-gold hover:text-foreground transition-colors"
+                  className="mt-6 inline-flex items-center justify-center gap-2 w-full text-[11px] tracking-[0.22em] uppercase text-gold hover:text-foreground transition-colors"
                 >
-                  Demander le prix <ArrowRight size={12} />
+                  En savoir plus <ArrowRight size={12} />
                 </Link>
               </div>
             </article>
@@ -389,37 +378,7 @@ function Index() {
 }
 
 const featured = [
-  {
-    name: "Solitaire Étoile",
-    ref: "REF · WC-1042",
-    image: pouchDiamonds,
-    specs: [
-      { label: "Carat", value: "1.52" },
-      { label: "Couleur", value: "D" },
-      { label: "Clarté", value: "VVS1" },
-      { label: "Taille", value: "Excellent" },
-    ],
-  },
-  {
-    name: "Round Brilliant",
-    ref: "REF · WC-1088",
-    image: collectionDiamonds,
-    specs: [
-      { label: "Carat", value: "2.14" },
-      { label: "Couleur", value: "E" },
-      { label: "Clarté", value: "VS1" },
-      { label: "Taille", value: "Excellent" },
-    ],
-  },
-  {
-    name: "Émeraude Royale",
-    ref: "REF · WC-1120",
-    image: aboutCraft,
-    specs: [
-      { label: "Carat", value: "3.05" },
-      { label: "Couleur", value: "F" },
-      { label: "Clarté", value: "VVS2" },
-      { label: "Taille", value: "Very Good" },
-    ],
-  },
+  { name: "Solitaire Étoile", image: pouchDiamonds },
+  { name: "Round Brilliant", image: collectionDiamonds },
+  { name: "Émeraude Royale", image: aboutCraft },
 ];
