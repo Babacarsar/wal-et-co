@@ -5,7 +5,6 @@ import {
   ShieldCheck,
   Gem,
   Award,
-  Sparkles,
   Search,
   Scissors,
   FileCheck,
@@ -261,20 +260,20 @@ function Index() {
             Intégrité et <span className="italic text-diamond-gradient">professionnalisme</span>
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            Chez WAL &amp; Co, nous croyons que chaque diamant mérite d'être présenté avec intégrité
-            et professionnalisme. Nous nous engageons à offrir :
+            Chez WAL &amp; Co, nous sélectionnons chaque diamant avec rigueur afin d'offrir à nos
+            clients des pierres naturelles répondant aux plus hauts standards de qualité, de
+            transparence et d'authenticité.
           </p>
           <ul className="mt-6 space-y-3">
             {[
-              "Des diamants naturels de qualité.",
-              "Une sélection rigoureuse des pierres.",
-              "Une taille réalisée avec précision.",
-              "Une certification reconnue.",
-              "Une transparence dans chacune de nos transactions.",
-              "Un service personnalisé adapté aux besoins de chaque client.",
+              "Des diamants naturels soigneusement sélectionnés.",
+              "Des diamants taillés répondant aux plus hauts standards de qualité.",
+              "Des diamants certifiés par des laboratoires gemmologiques reconnus.",
+              "Une transparence à chaque étape de nos transactions.",
+              "Un accompagnement personnalisé pour chaque client.",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm sm:text-base text-muted-foreground">
-                <Sparkles size={15} className="text-gold mt-1 shrink-0" />
+                <span className="shrink-0" aria-hidden="true">💎</span>
                 <span>{item}</span>
               </li>
             ))}
