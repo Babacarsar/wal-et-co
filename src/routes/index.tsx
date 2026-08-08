@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { SiteLayout } from "@/components/site-layout";
 import heroVideoAsset from "@/assets/hero-diamond-video.mp4.asset.json";
-import heroDiamondPhoto from "@/assets/hero-diamond-photo.jpg";
+import heroDiamondPhoto from "@/assets/hero-diamond-photo.png";
 import collectionDiamonds from "@/assets/diamonds-cut.jpeg";
 import aboutCraft from "@/assets/diamonds-rough.jpeg";
 import solitaireEtoile from "@/assets/solitaire-etoile.png";
@@ -81,10 +81,10 @@ function Index() {
             <div className="relative w-1/2 h-full">
               <img
                 src={heroDiamondPhoto}
-                alt="Diamant taillé brillant WAL & Co en 4K"
+                alt="Diamant taillé et charbon brut — transformation du carbone en pierre précieuse"
                 className="absolute inset-0 w-full h-full object-cover"
-                width={1920}
-                height={1088}
+                width={1024}
+                height={1024}
               />
             </div>
           </div>
