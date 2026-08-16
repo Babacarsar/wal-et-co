@@ -14,7 +14,7 @@ import { SiteLayout } from "@/components/site-layout";
 import heroVideoAsset from "@/assets/hero-diamond-video.mp4.asset.json";
 import heroDiamondPhoto from "@/assets/hero-diamond-photo.png";
 import collectionDiamonds from "@/assets/diamonds-cut.jpeg";
-import aboutCraft from "@/assets/diamonds-rough.jpeg";
+import engagementDiamonds from "@/assets/engagement-diamonds.png";
 import solitaireEtoile from "@/assets/solitaire-etoile.png";
 import emeraudeRoyale from "@/assets/emeraude-royale.png";
 import { buildPageSeo, breadcrumbJsonLd } from "@/lib/seo";
@@ -251,7 +251,7 @@ function Index() {
         <div className="order-2 lg:order-1 relative">
           <div className="absolute -inset-8 bg-gradient-to-tr from-deep-blue/20 via-transparent to-gold/15 blur-3xl float-slow" />
           <div className="img-dynamic relative aspect-[4/5] border border-border">
-            <img src={aboutCraft} alt="Diamants bruts sélectionnés par WAL & Co" loading="lazy" />
+            <img src={engagementDiamonds} alt="Collection de diamants taillés sélectionnés par WAL & Co" loading="lazy" />
           </div>
         </div>
         <div className="order-1 lg:order-2">
